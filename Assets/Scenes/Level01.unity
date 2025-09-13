@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249777176}
   - component: {fileID: 249777175}
+  - component: {fileID: 249777177}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -166,6 +167,19 @@ Transform:
   - {fileID: 832616856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &249777177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249777174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1658538d0d39a43b8e17f1c26fdde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _obstaclesTilemap: {fileID: 832616858}
 --- !u!1 &252089234
 GameObject:
   m_ObjectHideFlags: 0
@@ -98455,7 +98469,7 @@ GameObject:
   - component: {fileID: 832616857}
   - component: {fileID: 832616859}
   m_Layer: 0
-  m_Name: Walls
+  m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143187,7 +143201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3916580042506779140, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.57
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3916580042506779140, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
       propertyPath: m_LocalPosition.z
