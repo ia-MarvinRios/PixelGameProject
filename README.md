@@ -17,7 +17,7 @@ escapar..
 
 | Gameplay | Menú Principal |
 |---------|----------------|
-| ![gameplay](./Screenshots/gameplay.png) | ![menu](./Screenshots/menu.png) |
+| ![gameplay](./Screenshots/pic00.png) | ![menu](./Screenshots/menu.png) |
 
 ---
 
