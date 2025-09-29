@@ -176,10 +176,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 249777174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea1658538d0d39a43b8e17f1c26fdde6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9775cf4407acd3744b5582cfab2a0e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obstaclesTilemap: {fileID: 832616858}
+  _obstacleTilemaps:
+  - {fileID: 832616858}
 --- !u!1 &252089234
 GameObject:
   m_ObjectHideFlags: 0
@@ -143074,6 +143075,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 543732585020337251, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
+      propertyPath: end
+      value: 
+      objectReference: {fileID: 9169378667429674120}
+    - target: {fileID: 543732585020337251, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
+      propertyPath: _grid
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 543732585020337251, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
+      propertyPath: start
+      value: 
+      objectReference: {fileID: 1002589590554365017}
+    - target: {fileID: 543732585020337251, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 9169378667429674120}
+    - target: {fileID: 543732585020337251, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
+      propertyPath: pathfinder
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 802739078166744631, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.523
@@ -143126,11 +143147,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 543732585020337251, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
+--- !u!4 &1002589590554365017 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 802739078166744631, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
+  m_PrefabInstance: {fileID: 1002589590554365015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9169378667429674119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143165,7 +143192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705183064738658209, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
       propertyPath: orthographic size
-      value: 7.890625
+      value: 3.21875
       objectReference: {fileID: 0}
     - target: {fileID: 3705183064738658209, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -143252,6 +143279,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+--- !u!4 &9169378667429674120 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3916580042506779140, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+  m_PrefabInstance: {fileID: 9169378667429674119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
