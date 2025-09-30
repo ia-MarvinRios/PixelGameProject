@@ -39,9 +39,10 @@ public class Grid<TGridObject> {
     public Vector3 GetWorldPos(int x, int y) {
         return new Vector3(x, y) * _cellSize + _origin;
     }
-    public void GetXY(Vector3 worldPos, out int x, out int y) {
-        x = Mathf.FloorToInt(worldPos.x / _cellSize);
-        y = Mathf.FloorToInt(worldPos.y / _cellSize);
+    public void GetXY(Vector3 worldPos, out int x, out int y)
+    {
+        x = Mathf.FloorToInt((worldPos.x - _origin.x) / _cellSize);
+        y = Mathf.FloorToInt((worldPos.y - _origin.y) / _cellSize);
     }
     public void SetGridObject(int x, int y, TGridObject value) {
         if (x >= 0 && y >= 0 && x < _width && y < _height) {

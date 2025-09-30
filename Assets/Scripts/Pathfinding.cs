@@ -26,16 +26,25 @@ public class Pathfinding
         _grid.GetXY(startWorldPosition, out int startX, out int startY);
         _grid.GetXY(endWorldPosition, out int endX, out int endY);
 
+        //DEBUG
+        if (endX < 0 || endY < 0 || endX >= _grid.Width || endY >= _grid.Height) {
+            Debug.LogWarning($"<color=orange>Target is outside grid! WorldPos={endWorldPosition}, GridIndex=({endX},{endY})</color>");
+            return null;
+        }
+
         List<Node> path = FindPath(startX, startY, endX, endY);
 
         if (path == null) {
             return null;
         }
         else {
+            //MODIFIED
             List<Vector3> vectorPath = new List<Vector3>();
             foreach (Node node in path) {
-                vectorPath.Add(new Vector3(node.X, node.Y) * _grid.CellSize + Vector3.one * _grid.CellSize * 0.5f);
+                Vector3 worldPos = _grid.GetWorldPos(node.X, node.Y) + new Vector3(_grid.CellSize, _grid.CellSize, 0) * 0.5f;
+                vectorPath.Add(worldPos);
             }
+
 
             return vectorPath;
         }
@@ -45,6 +54,12 @@ public class Pathfinding
     {
         Node startNode = _grid.GetGridObject(startX, startY);
         Node endNode = _grid.GetGridObject(endX, endY);
+
+        //DEBUG
+        if (startNode == null || endNode == null) {
+            Debug.LogWarning($"<color=orange>Invalid start or end node: start=({startX},{startY}), end=({endX},{endY})</color>");
+            return null;
+        }
 
         _openList = new List<Node> { startNode };
         _closedList = new List<Node>();

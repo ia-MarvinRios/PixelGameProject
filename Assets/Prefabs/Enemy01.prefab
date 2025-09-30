@@ -96,9 +96,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 802739078166744631}
-  - component: {fileID: 543732585020337251}
+  - component: {fileID: 1552635166805242779}
   - component: {fileID: 3538598134461418904}
   - component: {fileID: 6696311216423532037}
+  - component: {fileID: 6297332371016589262}
   m_Layer: 0
   m_Name: Enemy01
   m_TagString: Untagged
@@ -122,7 +123,7 @@ Transform:
   - {fileID: 6809347766918884845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &543732585020337251
+--- !u!114 &1552635166805242779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,9 +132,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8471466480247502994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea6f4365621bbe4b8789d598c3959ab, type: 3}
+  m_Script: {fileID: 11500000, guid: b5488ce6ac70f81459c283c79fcca350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _repathRate: 0.5
 --- !u!70 &3538598134461418904
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -207,3 +209,30 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 7.75
+--- !u!50 &6297332371016589262
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8471466480247502994}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

@@ -5,12 +5,15 @@ using System.Collections.Generic;
 public class WalkableGrid : MonoBehaviour
 {
     Pathfinding _walkableGrid;
-
+    public static WalkableGrid Instance { get; private set; }
+    public Pathfinding Walkable { get { return _walkableGrid; } }
+    
     [Header("Tilemaps")]
     [SerializeField] List<Tilemap> _obstacleTilemaps;
 
     private void Awake()
     {
+        Instance = this;
         GenerateGrid();
     }
 
