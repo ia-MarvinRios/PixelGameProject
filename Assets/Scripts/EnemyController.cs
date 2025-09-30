@@ -76,8 +76,8 @@ public class EnemyController : MonoBehaviour
     {
         while (true)
         {
-            SetTargetPosition(EnemyBrain.Instance.GetNearestTargetPosition(transform).position);
             yield return new WaitForSeconds(_repathRate);
+            SetTargetPosition(EnemyBrain.Instance.GetNearestTargetPosition(transform).position);
         }
     }
 }
