@@ -10,6 +10,7 @@ public class EnemyBrain : MonoBehaviour
     [Space(10)]
     [Tooltip("Tag of the target the enemy will move towards.")]
     [SerializeField] string _targetTag = "Player";
+    [Tooltip("The basic movement speed of the enemy. Can be changed by modifiers.")]
     [SerializeField] float _moveSpeed = 5f;
 
     public string TargetTag { get { return _targetTag; } set { _targetTag = value; } }

@@ -9,14 +9,14 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 _direction;
     private PlayerInput _inputs;
-    private Rigidbody2D rb2D;
+    private Rigidbody2D _rb2D;
     private Animator _animator;
 
     private void Awake()
     {
         // Get Components
         _inputs = GetComponent<PlayerInput>();
-        rb2D = GetComponent<Rigidbody2D>();
+        _rb2D = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
     }
 
@@ -37,10 +37,10 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        rb2D.linearVelocity = _direction * _speed;
+        _rb2D.linearVelocity = _direction * _speed;
 
         // Update Animator Parameters
-        _animator.SetFloat("Velocity", rb2D.linearVelocity.magnitude);
+        _animator.SetFloat("Velocity", _rb2D.linearVelocity.magnitude);
         _animator.SetFloat("InputX", _direction.x);
         _animator.SetFloat("InputY", _direction.y);
     }
