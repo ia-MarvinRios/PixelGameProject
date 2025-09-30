@@ -99,7 +99,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 57e7b773343708f418173345093d3d73, type: 3}
+  m_Sprite: {fileID: 7157626006226560920, guid: e08392dc62b59594383a44842a8e7161, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,8 +194,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.08314443}
-  m_Size: {x: 0.48, y: 0.7745862}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
   m_Direction: 0
 --- !u!50 &9014325308545675609
 Rigidbody2D:
@@ -364,7 +364,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 3.109375
+  orthographic size: 3.984375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

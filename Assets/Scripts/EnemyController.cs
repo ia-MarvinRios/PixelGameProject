@@ -7,9 +7,16 @@ public class EnemyController : MonoBehaviour
     private List<Vector3> _path;
     private int _currentPathIndex;
     Rigidbody2D _rb;
+    bool _isAttacking = false;
 
     [Header("Enemy Settings")]
     [SerializeField, Range(0.1f, 2f)] float _repathRate = 0.5f;
+    [SerializeField] float _attackRange = 1.5f;
+    [SerializeField] float _attackCooldown = 2f;
+    [SerializeField] float _attackDamage = 10f;
+
+    public delegate void OnEnemyAttackEvent(float attackDamage);
+    public static event OnEnemyAttackEvent onEnemyAttack;
 
     private void OnDisable()
     {
@@ -20,10 +27,18 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
     }
     private void Start()
     {
         StartCoroutine(UpdateTargetPos());
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && Vector3.Distance(transform.position, other.transform.position) < _attackRange && !_isAttacking) {
+            StartCoroutine(Attack());
+        }
     }
 
     private void Update()
@@ -48,8 +63,7 @@ public class EnemyController : MonoBehaviour
             else
             {
                 _currentPathIndex++;
-                if (_currentPathIndex >= _path.Count)
-                {
+                if (_currentPathIndex >= _path.Count) {
                     StopMoving();
                 }
             }
@@ -64,8 +78,7 @@ public class EnemyController : MonoBehaviour
     {
         _currentPathIndex = 0;
         _path = WalkableGrid.Instance.Walkable.FindPath(transform.position, targetPosition);
-        if (_path == null)
-        {
+        if (_path == null) {
             Debug.LogWarning($"<color=orange>Enemy at {transform.position} couldn't find a path to target at {targetPosition}!</color>");
             StopCoroutine(UpdateTargetPos());
             StopMoving();
@@ -80,4 +93,14 @@ public class EnemyController : MonoBehaviour
             SetTargetPosition(EnemyBrain.Instance.GetNearestTargetPosition(transform).position);
         }
     }
+    IEnumerator Attack()
+    {
+        _isAttacking = true;
+
+        onEnemyAttack?.Invoke(_attackDamage);
+        yield return new WaitForSeconds(_attackCooldown);
+
+        _isAttacking = false;
+    }
+
 }

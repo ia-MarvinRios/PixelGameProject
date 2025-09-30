@@ -11,7 +11,6 @@ public class EnemyBrain : MonoBehaviour
     [Tooltip("Tag of the target the enemy will move towards.")]
     [SerializeField] string _targetTag = "Player";
     [SerializeField] float _moveSpeed = 5f;
-    [SerializeField] int _damage = 10;
 
     public string TargetTag { get { return _targetTag; } set { _targetTag = value; } }
     public float MoveSpeed { get { return _moveSpeed; } }
@@ -19,6 +18,16 @@ public class EnemyBrain : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+    private void OnEnable()
+    {
+        // Events
+        EnemyController.onEnemyAttack += HandleEnemyAttack;
+    }
+    private void OnDisable()
+    {
+        // Events
+        EnemyController.onEnemyAttack -= HandleEnemyAttack;
     }
     private void Start()
     {
@@ -54,5 +63,10 @@ public class EnemyBrain : MonoBehaviour
         }
 
         return target;
+    }
+
+    void HandleEnemyAttack(float damage)
+    {
+        GUIBrain.Instance.UpdateHealthBarByValue(-damage);
     }
 }
