@@ -143078,6 +143078,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1637987398 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7648193716632627062, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+  m_PrefabInstance: {fileID: 9169378667429674119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d875eb740d77c1c449dbf1b38ea40dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1662152162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143483,6 +143494,38 @@ PrefabInstance:
     - target: {fileID: 4011770167469996585, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177593504035962978, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177593504035962978, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177593504035962978, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177593504035962978, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1637987398}
+    - target: {fileID: 6177593504035962978, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177593504035962978, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177593504035962978, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177593504035962978, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7612633651557717117, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
       propertyPath: m_Sprite

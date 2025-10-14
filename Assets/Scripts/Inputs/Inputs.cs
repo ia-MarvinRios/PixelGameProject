@@ -115,7 +115,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""id"": ""0381bb33-afb9-4b1f-872b-fe539860c604"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -264,7 +264,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""323dd844-6669-4a97-aa4b-cc94825d3eba"",
-                    ""path"": ""<Mouse>/delta"",
+                    ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
