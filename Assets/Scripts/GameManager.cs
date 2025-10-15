@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private float _timeOnLevel = 0f;
+
     public static GameManager Instance { get; private set; }
+    public float TimeOnLevel { get { return _timeOnLevel; } }
+    
+
     private void Awake()
     {
         Instance = this;
@@ -14,6 +19,10 @@ public class GameManager : MonoBehaviour
     private void OnDisable()
     {
         GUIBrain.onHealthBarZero -= GameOver;
+    }
+    private void Update()
+    {
+        _timeOnLevel += Time.deltaTime;
     }
 
     private void GameOver()
