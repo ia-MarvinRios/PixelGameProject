@@ -16,7 +16,6 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField] float _moveSpeed = 5f;
     [Header("Spawn Settings")]
     [Space(10)]
-    [SerializeField] Transform _enemyContainer;
     [SerializeField] Transform[] _spawnPoints;
     [SerializeField] GameObject[] _enemyPrefabs;
 
@@ -83,7 +82,7 @@ public class EnemyBrain : MonoBehaviour
     }
     GameObject HandleEnemyDeath(GameObject enemy)
     {
-        ObjectPoolManager.ReturnObjectToPool(enemy, ObjectPoolManager.PoolType.enemySlime);
+        ObjectPoolManager.ReturnObjectToPool(enemy, ObjectPoolManager.PoolType.enemies);
         return enemy;
     }
 
@@ -96,7 +95,8 @@ public class EnemyBrain : MonoBehaviour
             {
                 foreach (Transform spawnPoint in _spawnPoints)
                 {
-                    ObjectPoolManager.SpawnObject(_enemyPrefabs[0], spawnPoint.position, spawnPoint.rotation, ObjectPoolManager.PoolType.enemySlime);
+                    int a = Random.Range(0, _enemyPrefabs.Length);
+                    ObjectPoolManager.SpawnObject(_enemyPrefabs[a], spawnPoint.position, spawnPoint.rotation, ObjectPoolManager.PoolType.enemies);
                     _enemyCount++;
                 }
                 yield return new WaitForSeconds(_spawnRate);

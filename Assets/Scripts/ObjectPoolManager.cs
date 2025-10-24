@@ -12,7 +12,7 @@ public class ObjectPoolManager : MonoBehaviour
     // Categories of pools
     private static GameObject _gameObjectsEmpty;
     private static GameObject _basicBullet01;
-    private static GameObject _enemySlime;
+    private static GameObject _enemies;
 
     // Dictionaries
     private static Dictionary<GameObject, ObjectPool<GameObject>> _objectPools;
@@ -22,7 +22,7 @@ public class ObjectPoolManager : MonoBehaviour
     {
         GameObjects,
         BasicBullet01,
-        enemySlime,
+        enemies,
     }
     public static PoolType PoolingType;
 
@@ -45,8 +45,8 @@ public class ObjectPoolManager : MonoBehaviour
         _basicBullet01 = new GameObject("BasicBullet01");
         _basicBullet01.transform.SetParent(_emptyHoder.transform);
 
-        _enemySlime = new GameObject("EnemySlime");
-        _enemySlime.transform.SetParent(_emptyHoder.transform);
+        _enemies = new GameObject("Enemies");
+        _enemies.transform.SetParent(_emptyHoder.transform);
 
         if (_addToDontDestroyOnLoad)
             DontDestroyOnLoad(_gameObjectsEmpty.transform.root);
@@ -106,8 +106,8 @@ public class ObjectPoolManager : MonoBehaviour
             case PoolType.BasicBullet01:
                 return _basicBullet01;
 
-            case PoolType.enemySlime:
-                return _enemySlime;
+            case PoolType.enemies:
+                return _enemies;
 
             default:
                 return null;
