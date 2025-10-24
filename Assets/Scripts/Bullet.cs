@@ -1,18 +1,41 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Rigidbody2D MyRb;
-    public float Speed;
+    [SerializeField] Rigidbody2D _rb2d;
+    [SerializeField] float _speed = 5f;
+    [SerializeField] float _lifeTime = 1.5f;
+    Vector2 _direction;
 
-
-    void Start()
+    private void OnDisable()
     {
-        MyRb = GetComponent<Rigidbody2D>();
+        StopAllCoroutines();
     }
 
-    private void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        MyRb.linearVelocity = new Vector2(+Speed, 0);
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("SolidObstacle"))
+        {
+            StartCoroutine(DisableOnNextFrame());
+        }
+    }
+
+    public void Initialize(Vector2 dir)
+    {
+        _direction = dir.normalized;
+        _rb2d.linearVelocity = _direction * _speed;
+        StartCoroutine(LifeTimeHandler());
+    }
+
+    IEnumerator LifeTimeHandler()
+    {
+        yield return new WaitForSeconds(_lifeTime);
+        ObjectPoolManager.ReturnObjectToPool(gameObject, ObjectPoolManager.PoolType.BasicBullet01);
+    }
+    IEnumerator DisableOnNextFrame()
+    {
+        yield return null;
+        ObjectPoolManager.ReturnObjectToPool(gameObject);
     }
 }

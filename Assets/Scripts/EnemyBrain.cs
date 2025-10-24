@@ -32,11 +32,13 @@ public class EnemyBrain : MonoBehaviour
     {
         // Events
         EnemyController.onEnemyAttack += HandleEnemyAttack;
+        EnemyController.onEnemyDie += HandleEnemyDeath;
     }
     private void OnDisable()
     {
         // Events
         EnemyController.onEnemyAttack -= HandleEnemyAttack;
+        EnemyController.onEnemyDie -= HandleEnemyDeath;
     }
     private void Start()
     {
@@ -79,6 +81,11 @@ public class EnemyBrain : MonoBehaviour
     {
         GUIBrain.Instance.UpdateHealthBarByValue(-damage);
     }
+    GameObject HandleEnemyDeath(GameObject enemy)
+    {
+        ObjectPoolManager.ReturnObjectToPool(enemy, ObjectPoolManager.PoolType.enemySlime);
+        return enemy;
+    }
 
     IEnumerator SpawnEnemies()
     {
@@ -89,7 +96,7 @@ public class EnemyBrain : MonoBehaviour
             {
                 foreach (Transform spawnPoint in _spawnPoints)
                 {
-                    Instantiate(_enemyPrefabs[0], spawnPoint.position, spawnPoint.rotation, _enemyContainer);
+                    ObjectPoolManager.SpawnObject(_enemyPrefabs[0], spawnPoint.position, spawnPoint.rotation, ObjectPoolManager.PoolType.enemySlime);
                     _enemyCount++;
                 }
                 yield return new WaitForSeconds(_spawnRate);

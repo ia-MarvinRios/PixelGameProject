@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
+    private void Start()
+    {
+        ConfineCursor();
+    }
     private void OnEnable()
     {
         GUIBrain.onHealthBarZero += GameOver;
@@ -25,8 +29,20 @@ public class GameManager : MonoBehaviour
         _timeOnLevel += Time.deltaTime;
     }
 
-    private void GameOver()
+    void GameOver()
     {
         Debug.Log("Player is <color=#FF0000>dead</color>, <color=#ffff>Game Over!</color>");
+    }
+    public void ConfineCursor()
+    {
+        // Hide and lock the cursor.
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+    }
+    public void UnlockCursor()
+    {
+        // Show and unlock the cursor.
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

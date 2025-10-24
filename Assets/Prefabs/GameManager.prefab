@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904575776012576001}
   - component: {fileID: 3996588490580797806}
+  - component: {fileID: 8596136898544199823}
   - component: {fileID: 7846784204178852042}
   - component: {fileID: 7419850919570809591}
   m_Layer: 0
@@ -46,6 +47,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f475910afdb6b0b449362e4d5f6a576f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8596136898544199823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738796438868193198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c1e5e04ac3447742b846dbb164a9c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _addToDontDestroyOnLoad: 0
 --- !u!114 &7846784204178852042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,5 +85,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f44004c41fb6d4ebf673990161460c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spawnRate: 2
   _targetTag: Player
   _moveSpeed: 10
+  _enemyContainer: {fileID: 0}
+  _spawnPoints: []
+  _enemyPrefabs: []

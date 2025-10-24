@@ -14,14 +14,30 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float _attackRange = 1.5f;
     [SerializeField] float _attackCooldown = 2f;
     [SerializeField] float _attackDamage = 10f;
+    [SerializeField] float _health = 10f;
 
+    // Events
     public delegate void OnEnemyAttackEvent(float attackDamage);
     public static event OnEnemyAttackEvent onEnemyAttack;
+
+    public delegate GameObject onEnemyDieEvent(GameObject enemy);
+    public static event onEnemyDieEvent onEnemyDie;
 
     private void OnDisable()
     {
         _rb = null;
         StopAllCoroutines();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log($"Enemy {gameObject.name} was hit by {collision.gameObject.name}");
+
+            // Enemy hit by bullet logic here
+            TakeDamage();
+        }
     }
 
     private void Awake()
@@ -82,6 +98,17 @@ public class EnemyController : MonoBehaviour
             Debug.LogWarning($"<color=orange>Enemy at {transform.position} couldn't find a path to target at {targetPosition}!</color>");
             StopCoroutine(UpdateTargetPos());
             StopMoving();
+        }
+    }
+
+    void TakeDamage()
+    {
+        _health -= 5f;
+
+        // Handle death
+        if (_health <= 0f)
+        {
+            onEnemyDie?.Invoke(gameObject);
         }
     }
 

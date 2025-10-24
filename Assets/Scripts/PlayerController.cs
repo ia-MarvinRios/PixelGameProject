@@ -1,17 +1,27 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(PlayerInput))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Shooting Settings")]
+    [SerializeField] Image _aim;
+    [SerializeField] Transform _firePoint;
+    [SerializeField] GameObject[] _bulletPrefabs;
+    [SerializeField] float _cooldown = 1f;
+
     [Header("Stats Settings")]
     [SerializeField] private float _speed = 2f;
 
     private Vector2 _direction;
-    private Vector3 _mousePos;
+    private Vector2 _mousePos;
+    private Vector3 _mouseWorldPos;
     private PlayerInput _inputs;
     private Rigidbody2D _rb2D;
     private Animator _animator;
+    private bool _isOnCooldown = false;
 
     private void Awake()
     {
@@ -21,9 +31,15 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
     }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     private void Update()
     {
         GetInputs();
+        MoveAim();
     }
 
     private void FixedUpdate()
@@ -34,7 +50,8 @@ public class PlayerController : MonoBehaviour
     void GetInputs()
     {
         _direction = _inputs.actions["Move"].ReadValue<Vector2>();
-        _mousePos = Camera.main.ScreenToWorldPoint(new Vector3(_inputs.actions["Aim"].ReadValue<Vector2>().x, _inputs.actions["Aim"].ReadValue<Vector2>().y, Camera.main.nearClipPlane));
+        _mousePos = _inputs.actions["Aim"].ReadValue<Vector2>();
+        _mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(_inputs.actions["Aim"].ReadValue<Vector2>().x, _inputs.actions["Aim"].ReadValue<Vector2>().y, Camera.main.nearClipPlane));
     }
 
     void Move()
@@ -49,10 +66,29 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed && !_isOnCooldown)
         {
             // Shoot logic
             Debug.Log("Pew Pew");
+
+            StartCoroutine(ShootCoroutine());
         }
+    }
+
+    void MoveAim()
+    {
+        _aim.rectTransform.position = _mousePos;
+    }
+
+    IEnumerator ShootCoroutine()
+    {
+        _isOnCooldown = true;
+
+        var obj = ObjectPoolManager.SpawnObject(_bulletPrefabs[0], transform.position, transform.rotation, ObjectPoolManager.PoolType.BasicBullet01);
+        obj.GetComponent<Bullet>().Initialize((Vector2)(_mouseWorldPos - _firePoint.position));
+        Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        yield return new WaitForSeconds(_cooldown);
+
+        _isOnCooldown = false;
     }
 }
