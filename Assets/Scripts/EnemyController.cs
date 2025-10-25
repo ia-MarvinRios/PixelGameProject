@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     bool _isAttacking = false;
 
     [Header("Enemy Settings")]
+    [SerializeField] Animator _animator;
     [SerializeField, Range(0.1f, 2f)] float _repathRate = 0.5f;
     [SerializeField] float _attackRange = 1.5f;
     [SerializeField] float _attackCooldown = 2f;
@@ -84,6 +85,10 @@ public class EnemyController : MonoBehaviour
                 }
             }
         }
+
+        // Update walking animations
+        _animator.SetFloat("VelocityX", _rb.linearVelocity.x);
+        _animator.SetFloat("VelocityY", _rb.linearVelocity.y);
     }
 
     void StopMoving() {

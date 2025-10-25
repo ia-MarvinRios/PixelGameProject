@@ -7,10 +7,13 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     [Header("Shooting Settings")]
-    [SerializeField] Image _aim;
-    [SerializeField] Transform _firePoint;
-    [SerializeField] GameObject[] _bulletPrefabs;
     [SerializeField] float _cooldown = 1f;
+    [SerializeField] Image _aim;
+    [SerializeField] GameObject _defaultWeapon;
+    [SerializeField] Transform _weaponRoot;
+    [SerializeField] Vector2 _orbitOffset = new Vector2(0.5f, 0.5f);
+    [SerializeField] float _orbitRadius = 0.5f;
+    [SerializeField] GameObject[] _bulletPrefabs;
 
     [Header("Stats Settings")]
     [SerializeField] private float _speed = 2f;
@@ -21,7 +24,12 @@ public class PlayerController : MonoBehaviour
     private PlayerInput _inputs;
     private Rigidbody2D _rb2D;
     private Animator _animator;
+    GameObject _currentWeapon;
+    Transform _firePoint;
     private bool _isOnCooldown = false;
+
+    // public properties
+    public GameObject CurrentWeaponPrefab { get { return _currentWeapon; } set { _currentWeapon = value; } }
 
     private void Awake()
     {
@@ -29,6 +37,13 @@ public class PlayerController : MonoBehaviour
         _inputs = GetComponent<PlayerInput>();
         _rb2D = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Start()
+    {
+        // Initialize Weapon
+        _currentWeapon = Instantiate(_defaultWeapon, _weaponRoot.transform.position, _weaponRoot.transform.rotation, transform);
+        _firePoint = _currentWeapon.transform.Find("Firepoint");
     }
 
     private void OnDisable()
@@ -39,7 +54,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         GetInputs();
-        MoveAim();
+        MoveWeaponAndAim();
     }
 
     private void FixedUpdate()
@@ -51,7 +66,7 @@ public class PlayerController : MonoBehaviour
     {
         _direction = _inputs.actions["Move"].ReadValue<Vector2>();
         _mousePos = _inputs.actions["Aim"].ReadValue<Vector2>();
-        _mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(_inputs.actions["Aim"].ReadValue<Vector2>().x, _inputs.actions["Aim"].ReadValue<Vector2>().y, Camera.main.nearClipPlane));
+        _mouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(_inputs.actions["Aim"].ReadValue<Vector2>().x, _inputs.actions["Aim"].ReadValue<Vector2>().y, -Camera.main.transform.position.z));
     }
 
     void Move()
@@ -75,17 +90,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void MoveAim()
+    void MoveWeaponAndAim()
     {
+        // Move UI Aim
         _aim.rectTransform.position = _mousePos;
+
+        // Move Weapon Orbit
+        Vector3 dir = (_mouseWorldPos - _weaponRoot.position).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        Vector3 orbitCenter = _weaponRoot.position + (Vector3)_orbitOffset;
+
+        _currentWeapon.transform.position = orbitCenter + dir * _orbitRadius;
+
+        _currentWeapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     IEnumerator ShootCoroutine()
     {
         _isOnCooldown = true;
 
-        var obj = ObjectPoolManager.SpawnObject(_bulletPrefabs[0], transform.position, transform.rotation, ObjectPoolManager.PoolType.BasicBullet01);
-        obj.GetComponent<Bullet>().Initialize((Vector2)(_mouseWorldPos - _firePoint.position));
+        var obj = ObjectPoolManager.SpawnObject(_bulletPrefabs[0], _firePoint.position, _firePoint.rotation, ObjectPoolManager.PoolType.BasicBullet01);
+        obj.GetComponent<Bullet>().Initialize((_mouseWorldPos - _firePoint.position).normalized);
         Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         yield return new WaitForSeconds(_cooldown);
 

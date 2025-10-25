@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5488ce6ac70f81459c283c79fcca350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 585626173473185289}
   _repathRate: 0.5
   _attackRange: 1.5
   _attackCooldown: 2

@@ -82,7 +82,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,7 +120,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -161,10 +161,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 95
-        width: 23
-        height: 29
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 95
-        width: 23
-        height: 31
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_2
       rect:
         serializedVersion: 2
-        x: 69
-        y: 95
-        width: 23
-        height: 29
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_3
       rect:
         serializedVersion: 2
-        x: 101
-        y: 95
-        width: 23
-        height: 31
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 63
-        width: 23
-        height: 29
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_5
       rect:
         serializedVersion: 2
-        x: 37
-        y: 63
-        width: 23
-        height: 31
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,9 +293,9 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_6
       rect:
         serializedVersion: 2
-        x: 37
-        y: 31
-        width: 21
+        x: 64
+        y: 64
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_7
       rect:
         serializedVersion: 2
-        x: 69
-        y: 63
-        width: 23
-        height: 29
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_8
       rect:
         serializedVersion: 2
-        x: 101
-        y: 63
-        width: 23
-        height: 31
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,9 +359,9 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_9
       rect:
         serializedVersion: 2
-        x: 101
-        y: 31
-        width: 21
+        x: 32
+        y: 32
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_10
       rect:
         serializedVersion: 2
-        x: 5
-        y: 31
-        width: 21
-        height: 29
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_11
       rect:
         serializedVersion: 2
-        x: 39
-        y: 0
-        width: 21
-        height: 31
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_12
       rect:
         serializedVersion: 2
-        x: 69
-        y: 31
-        width: 21
-        height: 29
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_13
       rect:
         serializedVersion: 2
-        x: 103
+        x: 32
         y: 0
-        width: 21
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_14
       rect:
         serializedVersion: 2
-        x: 7
+        x: 64
         y: 0
-        width: 21
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: SkeletonMovementSpritesheet_15
       rect:
         serializedVersion: 2
-        x: 71
+        x: 96
         y: 0
-        width: 21
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,7 +513,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d6ba1a1a047fa4246bc38347d80e45b2
     internalID: 0
     vertices: []
     indices: 
@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SkeletonMovementSpritesheet_0: -1236156762664690741
+      SkeletonMovementSpritesheet_1: 1130672068440685730
+      SkeletonMovementSpritesheet_10: 1930313928659629201
+      SkeletonMovementSpritesheet_11: -1928701556873186923
+      SkeletonMovementSpritesheet_12: 244972611095212170
+      SkeletonMovementSpritesheet_13: -7184426195711480632
+      SkeletonMovementSpritesheet_14: 5717555549215074479
+      SkeletonMovementSpritesheet_15: -1868272528200436027
+      SkeletonMovementSpritesheet_2: -1070481864008095628
+      SkeletonMovementSpritesheet_3: -2025356722661434179
+      SkeletonMovementSpritesheet_4: -8536710841696711815
+      SkeletonMovementSpritesheet_5: -8452856820798134965
+      SkeletonMovementSpritesheet_6: 7455830451512890650
+      SkeletonMovementSpritesheet_7: -929322101484778155
+      SkeletonMovementSpritesheet_8: 6731920378850641093
+      SkeletonMovementSpritesheet_9: 4268527971786045740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

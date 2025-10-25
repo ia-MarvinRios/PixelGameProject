@@ -110,6 +110,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2755766122685307929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8833090779545489256}
+  m_Layer: 0
+  m_Name: WeaponRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8833090779545489256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2755766122685307929}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3916580042506779140}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4011770167469996585
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +176,7 @@ Transform:
   m_Children:
   - {fileID: 2413219506600259079}
   - {fileID: 8278530134725245459}
-  - {fileID: 3224327767228011021}
+  - {fileID: 8833090779545489256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7648193716632627062
@@ -160,11 +191,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d875eb740d77c1c449dbf1b38ea40dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cooldown: 1
   _aim: {fileID: 0}
-  _firePoint: {fileID: 3224327767228011021}
+  _defaultWeapon: {fileID: 7863102022043139381, guid: b03e933cc84b99c44849132bbc76f3a1, type: 3}
+  _weaponRoot: {fileID: 8833090779545489256}
   _bulletPrefabs:
   - {fileID: 6947518719489009406, guid: 21c69ed91be1d864e840dc2adfc35571, type: 3}
-  _cooldown: 1
   _speed: 2
 --- !u!70 &3502284345995116803
 CapsuleCollider2D:
@@ -288,37 +320,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!1 &6507076012958899198
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3224327767228011021}
-  m_Layer: 0
-  m_Name: BulletRoot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3224327767228011021
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6507076012958899198}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3916580042506779140}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8211469678871990324
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +414,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 3.21875
+  orthographic size: 7.921875
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
