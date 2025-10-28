@@ -1,43 +1,10 @@
 fileFormatVersion: 2
-guid: 83212e5408d77934f9d13263a3a9e40e
+guid: 14384bfe22193584b9cd0f397149af08
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7157626006226560920
-    second: ProtaIdleSpritesheet_0
-  - first:
-      213: -2105938095391031030
-    second: ProtaIdleSpritesheet_1
-  - first:
-      213: -2957929481969538532
-    second: ProtaIdleSpritesheet_2
-  - first:
-      213: 7681527961483524271
-    second: ProtaIdleSpritesheet_3
-  - first:
-      213: 8005591419323885468
-    second: ProtaIdleSpritesheet_4
-  - first:
-      213: -6804586563525970855
-    second: ProtaIdleSpritesheet_5
-  - first:
-      213: -2838092709965090041
-    second: ProtaIdleSpritesheet_6
-  - first:
-      213: 2551725521348633921
-    second: ProtaIdleSpritesheet_7
-  - first:
-      213: -2741876118139352706
-    second: ProtaIdleSpritesheet_8
-  - first:
-      213: 7782568871986244835
-    second: ProtaIdleSpritesheet_9
-  - first:
-      213: 7989677864241976740
-    second: ProtaIdleSpritesheet_10
-  - first:
-      213: -8240358699801875782
-    second: ProtaIdleSpritesheet_11
+      213: 7563879464961547526
+    second: hole-leve2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_0
+      name: hole-leve2_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 95
-        width: 23
-        height: 29
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,250 +128,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8976b301eeef45360800000000000000
-      internalID: 7157626006226560920
+      spriteID: 60d97e85c4c48f860800000000000000
+      internalID: 7563879464961547526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_1
+      name: hole-leve2_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 95
-        width: 23
-        height: 30
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a014141c57436c2e0800000000000000
-      internalID: -2105938095391031030
+      spriteID: fb602756b9c2be749a85f6b3a0b2edb2
+      internalID: 1469153831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_2
+      name: hole-leve2_2
       rect:
         serializedVersion: 2
-        x: 69
-        y: 95
-        width: 23
-        height: 29
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c1aec84dec253f6d0800000000000000
-      internalID: -2957929481969538532
+      spriteID: 80c2cc930fd8e1c4eb8a9c61ce6fd094
+      internalID: -1065284702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_3
+      name: hole-leve2_3
       rect:
         serializedVersion: 2
-        x: 5
-        y: 63
-        width: 23
-        height: 29
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fa8b4748bf44a9a60800000000000000
-      internalID: 7681527961483524271
+      spriteID: b0f710461a15448439433643dbed1649
+      internalID: -858156100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_4
+      name: hole-leve2_4
       rect:
         serializedVersion: 2
-        x: 37
-        y: 63
-        width: 23
-        height: 30
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c9727bdfaf2991f60800000000000000
-      internalID: 8005591419323885468
+      spriteID: 1b298e47889955e478ac9c21479c0421
+      internalID: -2064786038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_5
+      name: hole-leve2_5
       rect:
         serializedVersion: 2
-        x: 69
-        y: 63
-        width: 23
-        height: 29
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 95473ad92904191a0800000000000000
-      internalID: -6804586563525970855
+      spriteID: 292f05e9de2d5054caebfeecc0d8c7f5
+      internalID: 1984428295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_6
+      name: hole-leve2_6
       rect:
         serializedVersion: 2
-        x: 5
-        y: 31
-        width: 23
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 703b7e697b11d98d0800000000000000
-      internalID: -2838092709965090041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ProtaIdleSpritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 31
-        width: 23
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 145a84097dc896320800000000000000
-      internalID: 2551725521348633921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ProtaIdleSpritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 31
-        width: 23
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e794d289236e2f9d0800000000000000
-      internalID: -2741876118139352706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ProtaIdleSpritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 23
-        height: 28
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3eca0ceb72d310c60800000000000000
-      internalID: 7782568871986244835
+      spriteID: 303520eda4f17f64b964fc5212e037ba
+      internalID: -166047029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_10
+      name: hole-leve2_7
       rect:
         serializedVersion: 2
-        x: 37
+        x: 16
         y: 0
-        width: 23
-        height: 29
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a5d1f7bfa901ee60800000000000000
-      internalID: 7989677864241976740
+      spriteID: 9495fbc9b8a07ea438ef79eeaf544a83
+      internalID: -2073489253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProtaIdleSpritesheet_11
+      name: hole-leve2_8
       rect:
         serializedVersion: 2
-        x: 69
+        x: 32
         y: 0
-        width: 23
-        height: 28
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aba628cfb6d54ad80800000000000000
-      internalID: -8240358699801875782
+      spriteID: 1dc5b6354c40d4e4498f4ba401403885
+      internalID: -1126108595
       vertices: []
       indices: 
       edges: []
@@ -413,7 +314,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fb7f8e489f367554d99de0f8cc08f969
     internalID: 0
     vertices: []
     indices: 
@@ -423,18 +324,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ProtaIdleSpritesheet_0: 7157626006226560920
-      ProtaIdleSpritesheet_1: -2105938095391031030
-      ProtaIdleSpritesheet_10: 7989677864241976740
-      ProtaIdleSpritesheet_11: -8240358699801875782
-      ProtaIdleSpritesheet_2: -2957929481969538532
-      ProtaIdleSpritesheet_3: 7681527961483524271
-      ProtaIdleSpritesheet_4: 8005591419323885468
-      ProtaIdleSpritesheet_5: -6804586563525970855
-      ProtaIdleSpritesheet_6: -2838092709965090041
-      ProtaIdleSpritesheet_7: 2551725521348633921
-      ProtaIdleSpritesheet_8: -2741876118139352706
-      ProtaIdleSpritesheet_9: 7782568871986244835
+      hole-leve2_0: 7563879464961547526
+      hole-leve2_1: 1469153831
+      hole-leve2_2: -1065284702
+      hole-leve2_3: -858156100
+      hole-leve2_4: -2064786038
+      hole-leve2_5: 1984428295
+      hole-leve2_6: -166047029
+      hole-leve2_7: -2073489253
+      hole-leve2_8: -1126108595
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

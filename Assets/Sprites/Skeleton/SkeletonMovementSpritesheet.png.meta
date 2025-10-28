@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SkeletonMovementSpritesheet_0: -1236156762664690741
+      SkeletonMovementSpritesheet_1: 1130672068440685730
+      SkeletonMovementSpritesheet_10: 1930313928659629201
+      SkeletonMovementSpritesheet_11: -1928701556873186923
+      SkeletonMovementSpritesheet_12: 244972611095212170
+      SkeletonMovementSpritesheet_13: -7184426195711480632
+      SkeletonMovementSpritesheet_14: 5717555549215074479
+      SkeletonMovementSpritesheet_15: -1868272528200436027
+      SkeletonMovementSpritesheet_2: -1070481864008095628
+      SkeletonMovementSpritesheet_3: -2025356722661434179
+      SkeletonMovementSpritesheet_4: -8536710841696711815
+      SkeletonMovementSpritesheet_5: -8452856820798134965
+      SkeletonMovementSpritesheet_6: 7455830451512890650
+      SkeletonMovementSpritesheet_7: -929322101484778155
+      SkeletonMovementSpritesheet_8: 6731920378850641093
+      SkeletonMovementSpritesheet_9: 4268527971786045740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
