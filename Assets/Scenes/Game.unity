@@ -373841,6 +373841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4641306291784437690, guid: 5b7a5d959ae4a8644bb91eeb0964d0ee, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 5773220666377640494, guid: 5b7a5d959ae4a8644bb91eeb0964d0ee, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

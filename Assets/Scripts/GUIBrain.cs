@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GUIBrain : MonoBehaviour
 {
     [Header("GUI References")]
     [Space(10)]
     [SerializeField] Slider _healthBar;
+    [Space(10)]
+    [SerializeField] private string NameScene;
 
     public delegate void OnHealthBarZeroEvent();
     public static event OnHealthBarZeroEvent onHealthBarZero;
@@ -29,5 +32,15 @@ public class GUIBrain : MonoBehaviour
     private void IsHealthBarZero(float value) {
         if (value <= 0)
             onHealthBarZero?.Invoke();
+    }
+
+    public void Play()
+    {
+        if (!string.IsNullOrEmpty(NameScene))
+        {
+            SceneManager.LoadScene(NameScene);
+        }
+        else
+            Debug.LogError("?? No se ha asignado el nombre de la escena en el Inspector.");
     }
 }
