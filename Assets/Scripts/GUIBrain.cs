@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GUIBrain : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GUIBrain : MonoBehaviour
     [SerializeField] Slider _healthBar;
     [Space(10)]
     [SerializeField] private string NameScene;
+    [SerializeField] private float Wait;
+    [SerializeField] private Animator transition;
 
     public delegate void OnHealthBarZeroEvent();
     public static event OnHealthBarZeroEvent onHealthBarZero;
@@ -36,11 +39,16 @@ public class GUIBrain : MonoBehaviour
 
     public void Play()
     {
-        if (!string.IsNullOrEmpty(NameScene))
-        {
-            SceneManager.LoadScene(NameScene);
-        }
+        if (!string.IsNullOrEmpty(NameScene)) StartCoroutine(LoadLeve());
         else
             Debug.LogError("?? No se ha asignado el nombre de la escena en el Inspector.");
+    }
+
+    IEnumerator LoadLeve()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(Wait);
+        SceneManager.LoadScene(NameScene);
+
     }
 }
