@@ -6,6 +6,7 @@ public class GUIBrain : MonoBehaviour
     [Header("GUI References")]
     [Space(10)]
     [SerializeField] Slider _healthBar;
+    [SerializeField] internal GameObject _gameOverScreen;
 
     public delegate void OnHealthBarZeroEvent();
     public static event OnHealthBarZeroEvent onHealthBarZero;

@@ -92,18 +92,21 @@ public class PlayerController : MonoBehaviour
 
     void MoveWeaponAndAim()
     {
-        // Move UI Aim
-        _aim.rectTransform.position = _mousePos;
+        if (!GameManager.Instance.GameIsOver)
+        {
+            // Move UI Aim
+            _aim.rectTransform.position = _mousePos;
 
-        // Move Weapon Orbit
-        Vector3 dir = (_mouseWorldPos - _weaponRoot.position).normalized;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            // Move Weapon Orbit
+            Vector3 dir = (_mouseWorldPos - _weaponRoot.position).normalized;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        Vector3 orbitCenter = _weaponRoot.position + (Vector3)_orbitOffset;
+            Vector3 orbitCenter = _weaponRoot.position + (Vector3)_orbitOffset;
 
-        _currentWeapon.transform.position = orbitCenter + dir * _orbitRadius;
+            _currentWeapon.transform.position = orbitCenter + dir * _orbitRadius;
 
-        _currentWeapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            _currentWeapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        }
     }
 
     IEnumerator ShootCoroutine()

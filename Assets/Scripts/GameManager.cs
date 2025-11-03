@@ -1,12 +1,15 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private float _timeOnLevel = 0f;
+    bool gameOver = false;
 
     public static GameManager Instance { get; private set; }
     public float TimeOnLevel { get { return _timeOnLevel; } }
-    
+    public bool GameIsOver { get { return gameOver; } }
 
     private void Awake()
     {
@@ -14,7 +17,10 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        ConfineCursor();
+        /*
+        if (SceneManager.GetActiveScene().name != "Menu")
+            ConfineCursor();
+        */
     }
     private void OnEnable()
     {
@@ -29,9 +35,22 @@ public class GameManager : MonoBehaviour
         _timeOnLevel += Time.deltaTime;
     }
 
+    public void LoadScene(string name = "Menu")
+    {
+        SceneManager.LoadScene(name, LoadSceneMode.Single);
+    }
     void GameOver()
     {
-        Debug.Log("Player is <color=#FF0000>dead</color>, <color=#ffff>Game Over!</color>");
+        if (!gameOver)
+        {
+            gameOver = true;
+            Debug.Log("Player is <color=#FF0000>dead</color>, <color=#ffff>Game Over!</color>");
+            GUIBrain.Instance._gameOverScreen.SetActive(true);
+            Animator animator = GUIBrain.Instance._gameOverScreen.GetComponent<Animator>();
+            animator.SetTrigger("Start");
+
+            UnlockCursor();
+        }
     }
     public void ConfineCursor()
     {
