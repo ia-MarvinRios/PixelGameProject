@@ -457690,9 +457690,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7419850919570809591, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
-      propertyPath: _enemyContainer
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _sfxSource
       value: 
+      objectReference: {fileID: 6746024897327599942}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[1].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 57f55570489befd4ab1fe66a1429609e, type: 3}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[1].Name
+      value: SecondBreath
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[1].Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[2].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8881473959459744ab541edeed854977, type: 3}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[2].Name
+      value: OutOfAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[2].Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[3].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1bf896395b56cd46834832c94f5418f, type: 3}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[3].Name
+      value: Reloaded
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _soundsLibrary.Array.data[3].Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7419850919570809591, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
       propertyPath: _spawnPoints.Array.size
@@ -457742,6 +457782,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f475910afdb6b0b449362e4d5f6a576f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &6746024897327599942 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5557987636239012879, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+  m_PrefabInstance: {fileID: 6746024897327599934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9169378667429674119
 PrefabInstance:
   m_ObjectHideFlags: 0

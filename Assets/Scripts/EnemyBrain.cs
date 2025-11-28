@@ -83,6 +83,12 @@ public class EnemyBrain : MonoBehaviour
     GameObject HandleEnemyDeath(GameObject enemy)
     {
         ObjectPoolManager.ReturnObjectToPool(enemy, ObjectPoolManager.PoolType.enemies);
+
+        // Return enemy's HealthBar to the pool
+        EnemyController ctrl = enemy.GetComponent<EnemyController>();
+        if (ctrl != null) ObjectPoolManager.ReturnObjectToPool(ctrl.HealthBar.gameObject, ObjectPoolManager.PoolType.EnemyHealthBars);
+        else Debug.LogWarning($"Couldn't return {enemy}'s HealthBar to the pool.");
+
         return enemy;
     }
 

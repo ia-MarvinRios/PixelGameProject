@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         if (ctx.performed && !_isOnCooldown)
         {
             // Shoot logic
-            Debug.Log("Pew Pew");
+            AudioManager.Instance.PlaySoundByName("Shoot01");
 
             StartCoroutine(ShootCoroutine());
         }

@@ -17,10 +17,9 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        /*
         if (SceneManager.GetActiveScene().name != "Menu")
+            AudioManager.Instance.PlaySoundByName("Reloaded");
             ConfineCursor();
-        */
     }
     private void OnEnable()
     {

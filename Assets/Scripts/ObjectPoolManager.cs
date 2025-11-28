@@ -1,18 +1,22 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.UI;
 
 public class ObjectPoolManager : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private bool _addToDontDestroyOnLoad = false;
 
-    private GameObject _emptyHoder;
+    private GameObject _emptyHolder;
+    private GameObject _canvasObj;
 
     // Categories of pools
     private static GameObject _gameObjectsEmpty;
     private static GameObject _basicBullet01;
     private static GameObject _enemies;
+    private static GameObject _enemyHealthBars;
+    private static Canvas     _uiCanvas;
 
     // Dictionaries
     private static Dictionary<GameObject, ObjectPool<GameObject>> _objectPools;
@@ -23,6 +27,7 @@ public class ObjectPoolManager : MonoBehaviour
         GameObjects,
         BasicBullet01,
         enemies,
+        EnemyHealthBars,
     }
     public static PoolType PoolingType;
 
@@ -36,20 +41,46 @@ public class ObjectPoolManager : MonoBehaviour
 
     void SetupEmpties()
     {
-        _emptyHoder = new GameObject("Object Pools");
+        _emptyHolder = new GameObject("Object Pools");
+        _canvasObj = new GameObject("UI_Canvas");
+        SetUpUI();
 
         // Set the categories children of the empty holder
         _gameObjectsEmpty = new GameObject("GameObjects");
-        _gameObjectsEmpty.transform.SetParent(_emptyHoder.transform);
+        _gameObjectsEmpty.transform.SetParent(_emptyHolder.transform);
 
         _basicBullet01 = new GameObject("BasicBullet01");
-        _basicBullet01.transform.SetParent(_emptyHoder.transform);
+        _basicBullet01.transform.SetParent(_emptyHolder.transform);
 
         _enemies = new GameObject("Enemies");
-        _enemies.transform.SetParent(_emptyHoder.transform);
+        _enemies.transform.SetParent(_emptyHolder.transform);
+
+        _enemyHealthBars = new GameObject("EnemyHealthBars");
+        _enemyHealthBars.transform.SetParent(_canvasObj.transform);
+        _enemyHealthBars.transform.localScale = Vector3.one;
 
         if (_addToDontDestroyOnLoad)
             DontDestroyOnLoad(_gameObjectsEmpty.transform.root);
+    }
+    void SetUpUI()
+    {
+        _uiCanvas = _canvasObj.AddComponent<Canvas>();
+        _uiCanvas.renderMode = RenderMode.WorldSpace;
+
+        CanvasScaler scaler = _canvasObj.AddComponent<CanvasScaler>();
+        scaler.dynamicPixelsPerUnit = 1;
+        scaler.referencePixelsPerUnit = 32;
+
+        _canvasObj.AddComponent<GraphicRaycaster>();
+
+        RectTransform rt = _canvasObj.GetComponent<RectTransform>();
+        rt.anchoredPosition3D = Vector3.zero;
+        rt.sizeDelta = new Vector2(200, 30);
+        rt.anchorMin = Vector2.zero; rt.anchorMax = Vector2.zero;
+        rt.localRotation = Quaternion.identity;
+        rt.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+
+        _canvasObj.transform.SetParent(_emptyHolder.transform);
     }
 
     static void CreatePool(GameObject prefab, Vector3 pos, Quaternion rot, PoolType poolType = PoolType.GameObjects)
@@ -108,6 +139,9 @@ public class ObjectPoolManager : MonoBehaviour
 
             case PoolType.enemies:
                 return _enemies;
+
+            case PoolType.EnemyHealthBars:
+                return _enemyHealthBars;
 
             default:
                 return null;

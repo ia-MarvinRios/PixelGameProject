@@ -1,21 +1,36 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
     private List<Vector3> _path;
     private int _currentPathIndex;
     Rigidbody2D _rb;
+    CapsuleCollider2D _collider;
+    Slider _healthBar;
+    Coroutine _repathCoroutine;
     bool _isAttacking = false;
+    float _health;
 
     [Header("Enemy Settings")]
     [SerializeField] Animator _animator;
+    [SerializeField] Transform _healthBarAnchor;
+    [SerializeField] GameObject _healthBarPrefab;
     [SerializeField, Range(0.1f, 2f)] float _repathRate = 0.5f;
     [SerializeField] float _attackRange = 1.5f;
     [SerializeField] float _attackCooldown = 2f;
     [SerializeField] float _attackDamage = 10f;
-    [SerializeField] float _health = 10f;
+    [SerializeField] float _maxHealth = 10f;
+
+    /// <summary>
+    /// The current health value of the entity.
+    /// </summary>
+    public float Health { get { return _health; } }
+    public Transform HealthBarAnchor {  get { return _healthBarAnchor; } }
+    public Slider HealthBar { get { return _healthBar; } set { _healthBar = value; } }
+
 
     // Events
     public delegate void OnEnemyAttackEvent(float attackDamage);
@@ -24,6 +39,18 @@ public class EnemyController : MonoBehaviour
     public delegate GameObject onEnemyDieEvent(GameObject enemy);
     public static event onEnemyDieEvent onEnemyDie;
 
+
+    private void OnEnable()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        _rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
+        _collider = GetComponent<CapsuleCollider2D>();
+
+        _health = _maxHealth;
+        SetUpHealthBar();
+
+        _repathCoroutine = StartCoroutine(UpdateTargetPos());
+    }
     private void OnDisable()
     {
         _rb = null;
@@ -36,19 +63,8 @@ public class EnemyController : MonoBehaviour
         {
             Debug.Log($"Enemy {gameObject.name} was hit by {collision.gameObject.name}");
 
-            // Enemy hit by bullet logic here
             TakeDamage();
         }
-    }
-
-    private void Awake()
-    {
-        _rb = GetComponent<Rigidbody2D>();
-        _rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
-    }
-    private void Start()
-    {
-        StartCoroutine(UpdateTargetPos());
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -65,6 +81,7 @@ public class EnemyController : MonoBehaviour
 
     void HandleMovement()
     {
+
         if (_path != null)
         {
             Vector3 targetPosition = _path[_currentPathIndex];
@@ -86,12 +103,19 @@ public class EnemyController : MonoBehaviour
             }
         }
 
+        // Move Health Bar
+        _healthBar.transform.position = _healthBarAnchor.transform.position;
+
         // Update walking animations
         _animator.SetFloat("VelocityX", _rb.linearVelocity.x);
         _animator.SetFloat("VelocityY", _rb.linearVelocity.y);
     }
 
+    /// <summary>
+    /// Stops the enemy's movement by clearing the path and setting velocity to zero.
+    /// </summary>
     void StopMoving() {
+        StopCoroutine(_repathCoroutine);
         _path = null;
         _rb.linearVelocity = Vector2.zero;
     }
@@ -101,20 +125,48 @@ public class EnemyController : MonoBehaviour
         _path = WalkableGrid.Instance.Walkable.FindPath(transform.position, targetPosition);
         if (_path == null) {
             Debug.LogWarning($"<color=orange>Enemy at {transform.position} couldn't find a path to target at {targetPosition}!</color>");
-            StopCoroutine(UpdateTargetPos());
-            StopMoving();
+            //StopMoving();
         }
     }
-
     void TakeDamage()
     {
         _health -= 5f;
+        _healthBar.value = _health/_maxHealth;
 
         // Handle death
         if (_health <= 0f)
         {
-            onEnemyDie?.Invoke(gameObject);
+            StopMoving();
+            _collider.enabled = false;
+
+            if (_animator != null)
+                StartCoroutine(DieAnim());
+            else
+                onEnemyDie?.Invoke(gameObject);
         }
+    }
+    void SetUpHealthBar()
+    {
+        // Health Bar Reference
+        if (_healthBar == null)
+            _healthBar = ObjectPoolManager.SpawnObject(
+            _healthBarPrefab,
+            _healthBarAnchor.position,
+            Quaternion.identity,
+            ObjectPoolManager.PoolType.EnemyHealthBars).GetComponent<Slider>();
+        _healthBar.transform.localScale = Vector3.one;
+    }
+
+
+
+    // --- Coroutines ---
+
+    IEnumerator DieAnim()
+    {
+        _animator.SetTrigger("Die");
+        AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+        yield return new WaitForSeconds(stateInfo.length);
+        onEnemyDie?.Invoke(gameObject);
     }
 
     IEnumerator UpdateTargetPos()
