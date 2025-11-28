@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 184ef195001681b4cb2eada6186fca0b
+guid: 76283de924d2670458f4917772f2e768
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3752310935965674274
-    second: Gun Reload_0
+      213: -8796535443164364876
+    second: ProtaMuerte_0
   - first:
-      213: -5023396636917300986
-    second: Gun Reload_1
+      213: -7747301871057022610
+    second: ProtaMuerte_1
   - first:
-      213: -6163414629229825494
-    second: Gun Reload_2
+      213: -7138287815646808325
+    second: ProtaMuerte_2
   - first:
-      213: 6306854244209203015
-    second: Gun Reload_3
+      213: 5882154487112256855
+    second: ProtaMuerte_3
   - first:
-      213: -4833380687362149356
-    second: Gun Reload_4
+      213: -9182686490139989889
+    second: ProtaMuerte_4
   - first:
-      213: 7225572615778708597
-    second: Gun Reload_5
-  - first:
-      213: 6925770014240698843
-    second: Gun Reload_6
+      213: -7544134771404447751
+    second: ProtaMuerte_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gun Reload_0
+      name: ProtaMuerte_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 32
-        height: 32
+        width: 23
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed4d3f6951d1debc0800000000000000
-      internalID: -3752310935965674274
+      spriteID: 4bffd08de9d6ce580800000000000000
+      internalID: -8796535443164364876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Reload_1
+      name: ProtaMuerte_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 37
         y: 0
-        width: 32
-        height: 32
+        width: 23
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60107a2bf5f494ab0800000000000000
-      internalID: -5023396636917300986
+      spriteID: e615de7cefd0c7490800000000000000
+      internalID: -7747301871057022610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Reload_2
+      name: ProtaMuerte_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 69
         y: 0
-        width: 32
-        height: 32
+        width: 23
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a227f45cc07277aa0800000000000000
-      internalID: -6163414629229825494
+      spriteID: bf67fdb4d05bfec90800000000000000
+      internalID: -7138287815646808325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Reload_3
+      name: ProtaMuerte_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 102
         y: 0
-        width: 32
-        height: 32
+        width: 23
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,8 +209,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 747114c1582768750800000000000000
-      internalID: 6306854244209203015
+      spriteID: 75dcb4e475c91a150800000000000000
+      internalID: 5882154487112256855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProtaMuerte_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f786d670a4b809080800000000000000
+      internalID: -9182686490139989889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ProtaMuerte_5
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffd3cc5569dd4790800000000000000
+      internalID: -7544134771404447751
       vertices: []
       indices: 
       edges: []
@@ -222,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5cada2c0b41fe754f879756c0a895b3a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -231,11 +272,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Gun Reload_0: -3752310935965674274
-      Gun Reload_1: -5023396636917300986
-      Gun Reload_2: -6163414629229825494
-      Gun Reload_3: 6306854244209203015
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

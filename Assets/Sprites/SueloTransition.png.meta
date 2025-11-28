@@ -1,28 +1,10 @@
 fileFormatVersion: 2
-guid: 184ef195001681b4cb2eada6186fca0b
+guid: c921f6e9797d1b4469260da61d23ed07
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3752310935965674274
-    second: Gun Reload_0
-  - first:
-      213: -5023396636917300986
-    second: Gun Reload_1
-  - first:
-      213: -6163414629229825494
-    second: Gun Reload_2
-  - first:
-      213: 6306854244209203015
-    second: Gun Reload_3
-  - first:
-      213: -4833380687362149356
-    second: Gun Reload_4
-  - first:
-      213: 7225572615778708597
-    second: Gun Reload_5
-  - first:
-      213: 6925770014240698843
-    second: Gun Reload_6
+      213: 8842540312026723147
+    second: SueloTransition_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,7 +113,139 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gun Reload_0
+      name: SueloTransition_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b43bc62609307ba70800000000000000
+      internalID: 8842540312026723147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SueloTransition_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8d33dbb5a580d44a12bbad38105012
+      internalID: 1646148590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SueloTransition_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a8bb24f8075eb43b229eff0064938f
+      internalID: 1115230777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SueloTransition_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b255015143ae7724c8d3b3a6202ae543
+      internalID: -1297945291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SueloTransition_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2bcc8273779d342aeb10c1774cd897
+      internalID: -1757809750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SueloTransition_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d97e82de2256f644b1fc646da84f906
+      internalID: 1933199859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SueloTransition_6
       rect:
         serializedVersion: 2
         x: 0
@@ -144,16 +258,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ed4d3f6951d1debc0800000000000000
-      internalID: -3752310935965674274
+      spriteID: 444aa612391b4ea4db35539a93afa95d
+      internalID: -2075289865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Reload_1
+      name: SueloTransition_7
       rect:
         serializedVersion: 2
         x: 32
@@ -166,16 +280,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60107a2bf5f494ab0800000000000000
-      internalID: -5023396636917300986
+      spriteID: 9969ac4c8ae1524479859c69c4620912
+      internalID: -1079377718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Reload_2
+      name: SueloTransition_8
       rect:
         serializedVersion: 2
         x: 64
@@ -188,32 +302,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a227f45cc07277aa0800000000000000
-      internalID: -6163414629229825494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gun Reload_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 747114c1582768750800000000000000
-      internalID: 6306854244209203015
+      spriteID: 270816dfbaeb9404db792f5a716c8e66
+      internalID: 2135009159
       vertices: []
       indices: 
       edges: []
@@ -222,7 +314,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5cada2c0b41fe754f879756c0a895b3a
+    spriteID: 6be1261a61020ab47ae661d854f78acd
     internalID: 0
     vertices: []
     indices: 
@@ -232,10 +324,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gun Reload_0: -3752310935965674274
-      Gun Reload_1: -5023396636917300986
-      Gun Reload_2: -6163414629229825494
-      Gun Reload_3: 6306854244209203015
+      SueloTransition_0: 8842540312026723147
+      SueloTransition_1: 1646148590
+      SueloTransition_2: 1115230777
+      SueloTransition_3: -1297945291
+      SueloTransition_4: -1757809750
+      SueloTransition_5: 1933199859
+      SueloTransition_6: -2075289865
+      SueloTransition_7: -1079377718
+      SueloTransition_8: 2135009159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

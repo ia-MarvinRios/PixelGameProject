@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 184ef195001681b4cb2eada6186fca0b
+guid: 0b87632732936b34e8d4b98ae09c407b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3752310935965674274
-    second: Gun Reload_0
+      213: -7513484654613210952
+    second: DemonMuerte_0
   - first:
-      213: -5023396636917300986
-    second: Gun Reload_1
+      213: 1537723585501428194
+    second: DemonMuerte_1
   - first:
-      213: -6163414629229825494
-    second: Gun Reload_2
+      213: -2901575423239340308
+    second: DemonMuerte_2
   - first:
-      213: 6306854244209203015
-    second: Gun Reload_3
+      213: 1576393651299571194
+    second: DemonMuerte_3
   - first:
-      213: -4833380687362149356
-    second: Gun Reload_4
+      213: -397136954069946037
+    second: DemonMuerte_4
   - first:
-      213: 7225572615778708597
-    second: Gun Reload_5
-  - first:
-      213: 6925770014240698843
-    second: Gun Reload_6
+      213: 128803935995820478
+    second: DemonMuerte_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gun Reload_0
+      name: DemonMuerte_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,64 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed4d3f6951d1debc0800000000000000
-      internalID: -3752310935965674274
+      spriteID: 8b85e68c38dbab790800000000000000
+      internalID: -7513484654613210952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Reload_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60107a2bf5f494ab0800000000000000
-      internalID: -5023396636917300986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gun Reload_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a227f45cc07277aa0800000000000000
-      internalID: -6163414629229825494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gun Reload_3
+      name: DemonMuerte_1
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,8 +165,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 747114c1582768750800000000000000
-      internalID: 6306854244209203015
+      spriteID: 2e97d8c2477175510800000000000000
+      internalID: 1537723585501428194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonMuerte_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceeb0d896888bb7d0800000000000000
+      internalID: -2901575423239340308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonMuerte_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af554eb7ca970e510800000000000000
+      internalID: 1576393651299571194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonMuerte_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41fa7d5b061d7af0800000000000000
+      internalID: -397136954069946037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonMuerte_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9f3b25f7a99c100800000000000000
+      internalID: 128803935995820478
       vertices: []
       indices: 
       edges: []
@@ -222,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5cada2c0b41fe754f879756c0a895b3a
+    spriteID: 3b280ba0ea524084d90ba5a789055432
     internalID: 0
     vertices: []
     indices: 
@@ -232,10 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gun Reload_0: -3752310935965674274
-      Gun Reload_1: -5023396636917300986
-      Gun Reload_2: -6163414629229825494
-      Gun Reload_3: 6306854244209203015
+      DemonMuerte_0: -7513484654613210952
+      DemonMuerte_1: 1537723585501428194
+      DemonMuerte_2: -2901575423239340308
+      DemonMuerte_3: 1576393651299571194
+      DemonMuerte_4: -397136954069946037
+      DemonMuerte_5: 128803935995820478
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,64 +1,55 @@
 fileFormatVersion: 2
-guid: 85d4bbda6e38cea4387abf4a5e0389a6
+guid: b5d28805e01fcb34dbc5d5227caff2b3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1003526169788388636
-    second: SkeletonAttack_0
+      213: -3776068954225126288
+    second: ZombieMovementSpritesheet_0
   - first:
-      213: -6067433604985971107
-    second: SkeletonAttack_1
+      213: -4905048934951123882
+    second: ZombieMovementSpritesheet_1
   - first:
-      213: 6998320622276768452
-    second: SkeletonAttack_2
+      213: -8110372124671105025
+    second: ZombieMovementSpritesheet_2
   - first:
-      213: 6351813443586983450
-    second: SkeletonAttack_3
+      213: 5173406691824222201
+    second: ZombieMovementSpritesheet_3
   - first:
-      213: -8774163766112634068
-    second: SkeletonAttack_4
+      213: 210852877292373902
+    second: ZombieMovementSpritesheet_4
   - first:
-      213: -5703335002854178103
-    second: SkeletonAttack_5
+      213: -934661141647888120
+    second: ZombieMovementSpritesheet_5
   - first:
-      213: -6410131532513703490
-    second: SkeletonAttack_6
+      213: -7741721501028217173
+    second: ZombieMovementSpritesheet_6
   - first:
-      213: -1444616491127110605
-    second: SkeletonAttack_7
+      213: 856031972332005109
+    second: ZombieMovementSpritesheet_7
   - first:
-      213: 5348490929694382949
-    second: SkeletonAttack_8
+      213: -6031526239212624447
+    second: ZombieMovementSpritesheet_8
   - first:
-      213: -3460507605827764011
-    second: SkeletonAttack_9
+      213: -1150900736009052807
+    second: ZombieMovementSpritesheet_9
   - first:
-      213: 5828656635149748331
-    second: SkeletonAttack_10
+      213: -8894217183224123627
+    second: ZombieMovementSpritesheet_10
   - first:
-      213: -512110792014731890
-    second: SkeletonAttack_11
+      213: -4478623582196960100
+    second: ZombieMovementSpritesheet_11
   - first:
-      213: -7660148674477636822
-    second: SkeletonAttack_12
+      213: 3378630753733047081
+    second: ZombieMovementSpritesheet_12
   - first:
-      213: -2703575757687139956
-    second: SkeletonAttack_13
+      213: -4166927147871132229
+    second: ZombieMovementSpritesheet_13
   - first:
-      213: -4534682994215146347
-    second: SkeletonAttack_14
+      213: -6110629184824537431
+    second: ZombieMovementSpritesheet_14
   - first:
-      213: 4432307370950129862
-    second: SkeletonAttack_15
-  - first:
-      213: 6216568725664805926
-    second: SkeletonAttack_16
-  - first:
-      213: -6562313669647316910
-    second: SkeletonAttack_17
-  - first:
-      213: -6368224635275459653
-    second: SkeletonAttack_18
+      213: 8225280923222819809
+    second: ZombieMovementSpritesheet_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -167,7 +158,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SkeletonAttack_0
+      name: ZombieMovementSpritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -182,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ea64f6f342c212f0800000000000000
-      internalID: -1003526169788388636
+      spriteID: 074d708ea45b89bc0800000000000000
+      internalID: -3776068954225126288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_1
+      name: ZombieMovementSpritesheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -204,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5e1b8c68452ccba0800000000000000
-      internalID: -6067433604985971107
+      spriteID: 65484525bf3cdebb0800000000000000
+      internalID: -4905048934951123882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_2
+      name: ZombieMovementSpritesheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -226,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c2f81bf6870f1160800000000000000
-      internalID: 6998320622276768452
+      spriteID: ff7afb0f58b227f80800000000000000
+      internalID: -8110372124671105025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_3
+      name: ZombieMovementSpritesheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -248,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a168d807cac262850800000000000000
-      internalID: 6351813443586983450
+      spriteID: 9ffbfc0f9f1abc740800000000000000
+      internalID: 5173406691824222201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_4
+      name: ZombieMovementSpritesheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -270,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2bb0cfca88eb3680800000000000000
-      internalID: -8774163766112634068
+      spriteID: e8781e223991de200800000000000000
+      internalID: 210852877292373902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_5
+      name: ZombieMovementSpritesheet_5
       rect:
         serializedVersion: 2
         x: 32
@@ -292,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c243df480fa9d0b0800000000000000
-      internalID: -5703335002854178103
+      spriteID: 80177bac4aa6703f0800000000000000
+      internalID: -934661141647888120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_6
+      name: ZombieMovementSpritesheet_6
       rect:
         serializedVersion: 2
         x: 64
@@ -314,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb98df06553aa07a0800000000000000
-      internalID: -6410131532513703490
+      spriteID: bae853def41ef8490800000000000000
+      internalID: -7741721501028217173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_7
+      name: ZombieMovementSpritesheet_7
       rect:
         serializedVersion: 2
         x: 96
@@ -336,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33482b984f0b3fbe0800000000000000
-      internalID: -1444616491127110605
+      spriteID: 5f6e93b1b8c31eb00800000000000000
+      internalID: 856031972332005109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_8
+      name: ZombieMovementSpritesheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -358,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56b15dcb928a93a40800000000000000
-      internalID: 5348490929694382949
+      spriteID: 1c5a84287d6bb4ca0800000000000000
+      internalID: -6031526239212624447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_9
+      name: ZombieMovementSpritesheet_9
       rect:
         serializedVersion: 2
         x: 32
@@ -380,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d04914caaec9ffc0800000000000000
-      internalID: -3460507605827764011
+      spriteID: 97dd17ad0ed2700f0800000000000000
+      internalID: -1150900736009052807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_10
+      name: ZombieMovementSpritesheet_10
       rect:
         serializedVersion: 2
         x: 64
@@ -402,14 +393,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6803dff35c83e050800000000000000
-      internalID: 5828656635149748331
+      spriteID: 51f20ce6894619480800000000000000
+      internalID: -8894217183224123627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_11
+      name: ZombieMovementSpritesheet_11
       rect:
         serializedVersion: 2
         x: 96
@@ -424,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e85615ca2fd94e8f0800000000000000
-      internalID: -512110792014731890
+      spriteID: c94767ca49bb8d1c0800000000000000
+      internalID: -4478623582196960100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_12
+      name: ZombieMovementSpritesheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -446,14 +437,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a23c413ad5fa1b590800000000000000
-      internalID: -7660148674477636822
+      spriteID: 923f77f05ce43ee20800000000000000
+      internalID: 3378630753733047081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_13
+      name: ZombieMovementSpritesheet_13
       rect:
         serializedVersion: 2
         x: 32
@@ -468,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8153bb2c28fa7ad0800000000000000
-      internalID: -2703575757687139956
+      spriteID: bb5a53a16d91c26c0800000000000000
+      internalID: -4166927147871132229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_14
+      name: ZombieMovementSpritesheet_14
       rect:
         serializedVersion: 2
         x: 64
@@ -490,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59c2dc0b7d19111c0800000000000000
-      internalID: -4534682994215146347
+      spriteID: 9ae0664c12fa23ba0800000000000000
+      internalID: -6110629184824537431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_15
+      name: ZombieMovementSpritesheet_15
       rect:
         serializedVersion: 2
         x: 96
@@ -512,8 +503,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c8f3dc0218b28d30800000000000000
-      internalID: 4432307370950129862
+      spriteID: 1e34e769b61162270800000000000000
+      internalID: 8225280923222819809
       vertices: []
       indices: 
       edges: []
@@ -522,7 +513,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ae76d86ae7e861043a21c5112d2de4da
+    spriteID: 3c3464b3accebec49a59ce068594f10d
     internalID: 0
     vertices: []
     indices: 
@@ -532,22 +523,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SkeletonAttack_0: -1003526169788388636
-      SkeletonAttack_1: -6067433604985971107
-      SkeletonAttack_10: 5828656635149748331
-      SkeletonAttack_11: -512110792014731890
-      SkeletonAttack_12: -7660148674477636822
-      SkeletonAttack_13: -2703575757687139956
-      SkeletonAttack_14: -4534682994215146347
-      SkeletonAttack_15: 4432307370950129862
-      SkeletonAttack_2: 6998320622276768452
-      SkeletonAttack_3: 6351813443586983450
-      SkeletonAttack_4: -8774163766112634068
-      SkeletonAttack_5: -5703335002854178103
-      SkeletonAttack_6: -6410131532513703490
-      SkeletonAttack_7: -1444616491127110605
-      SkeletonAttack_8: 5348490929694382949
-      SkeletonAttack_9: -3460507605827764011
+      ZombieMovementSpritesheet_0: -3776068954225126288
+      ZombieMovementSpritesheet_1: -4905048934951123882
+      ZombieMovementSpritesheet_10: -8894217183224123627
+      ZombieMovementSpritesheet_11: -4478623582196960100
+      ZombieMovementSpritesheet_12: 3378630753733047081
+      ZombieMovementSpritesheet_13: -4166927147871132229
+      ZombieMovementSpritesheet_14: -6110629184824537431
+      ZombieMovementSpritesheet_15: 8225280923222819809
+      ZombieMovementSpritesheet_2: -8110372124671105025
+      ZombieMovementSpritesheet_3: 5173406691824222201
+      ZombieMovementSpritesheet_4: 210852877292373902
+      ZombieMovementSpritesheet_5: -934661141647888120
+      ZombieMovementSpritesheet_6: -7741721501028217173
+      ZombieMovementSpritesheet_7: 856031972332005109
+      ZombieMovementSpritesheet_8: -6031526239212624447
+      ZombieMovementSpritesheet_9: -1150900736009052807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 184ef195001681b4cb2eada6186fca0b
+guid: 13457c67fddd86d4cadda90256cbd68b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3752310935965674274
-    second: Gun Reload_0
+      213: 7399013103690079440
+    second: RedRocks_0
   - first:
-      213: -5023396636917300986
-    second: Gun Reload_1
+      213: -519197115822121239
+    second: RedRocks_1
   - first:
-      213: -6163414629229825494
-    second: Gun Reload_2
-  - first:
-      213: 6306854244209203015
-    second: Gun Reload_3
-  - first:
-      213: -4833380687362149356
-    second: Gun Reload_4
-  - first:
-      213: 7225572615778708597
-    second: Gun Reload_5
-  - first:
-      213: 6925770014240698843
-    second: Gun Reload_6
+      213: 4377212893223475798
+    second: RedRocks_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,7 +119,139 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gun Reload_0
+      name: RedRocks_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc58e557339ea660800000000000000
+      internalID: 7399013103690079440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedRocks_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eed30759f07bc8f0800000000000000
+      internalID: -519197115822121239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedRocks_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a58d65febfebc30800000000000000
+      internalID: 4377212893223475798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedRocks_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd7a7bf15532fe449154c10a0dafc7e
+      internalID: -2096396142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedRocks_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ba379171cf68044bc44b6994c5c158
+      internalID: -1782531602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedRocks_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05c4b34891f86842b114f62624848c0
+      internalID: -1055348504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedRocks_6
       rect:
         serializedVersion: 2
         x: 0
@@ -144,16 +264,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ed4d3f6951d1debc0800000000000000
-      internalID: -3752310935965674274
+      spriteID: 0a1eb89ea5620b641ac392280e393005
+      internalID: 326338583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Reload_1
+      name: RedRocks_7
       rect:
         serializedVersion: 2
         x: 32
@@ -166,16 +286,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60107a2bf5f494ab0800000000000000
-      internalID: -5023396636917300986
+      spriteID: ce13ec5850bde4a4d91c3f622a6be1a0
+      internalID: -201656838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun Reload_2
+      name: RedRocks_8
       rect:
         serializedVersion: 2
         x: 64
@@ -188,32 +308,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a227f45cc07277aa0800000000000000
-      internalID: -6163414629229825494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gun Reload_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 747114c1582768750800000000000000
-      internalID: 6306854244209203015
+      spriteID: 6f2474907b808944bb0ba87103b41215
+      internalID: -2051355514
       vertices: []
       indices: 
       edges: []
@@ -222,7 +320,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5cada2c0b41fe754f879756c0a895b3a
+    spriteID: 7416cdd32a01f6f4b9319c4d3fd73e57
     internalID: 0
     vertices: []
     indices: 
@@ -232,10 +330,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gun Reload_0: -3752310935965674274
-      Gun Reload_1: -5023396636917300986
-      Gun Reload_2: -6163414629229825494
-      Gun Reload_3: 6306854244209203015
+      RedRocks_0: 7399013103690079440
+      RedRocks_1: -519197115822121239
+      RedRocks_2: 4377212893223475798
+      RedRocks_3: -2096396142
+      RedRocks_4: -1782531602
+      RedRocks_5: -1055348504
+      RedRocks_6: 326338583
+      RedRocks_7: -201656838
+      RedRocks_8: -2051355514
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

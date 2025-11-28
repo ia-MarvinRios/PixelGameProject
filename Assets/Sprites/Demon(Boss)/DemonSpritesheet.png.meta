@@ -1,64 +1,43 @@
 fileFormatVersion: 2
-guid: 85d4bbda6e38cea4387abf4a5e0389a6
+guid: fd39d744d3a784540ba2958a0b4c309d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1003526169788388636
-    second: SkeletonAttack_0
+      213: 7010154375143423308
+    second: DemonSpritesheet_0
   - first:
-      213: -6067433604985971107
-    second: SkeletonAttack_1
+      213: 6703918865389199168
+    second: DemonSpritesheet_1
   - first:
-      213: 6998320622276768452
-    second: SkeletonAttack_2
+      213: 9204244922300145192
+    second: DemonSpritesheet_2
   - first:
-      213: 6351813443586983450
-    second: SkeletonAttack_3
+      213: 69946903487817685
+    second: DemonSpritesheet_3
   - first:
-      213: -8774163766112634068
-    second: SkeletonAttack_4
+      213: 1692984259483765213
+    second: DemonSpritesheet_4
   - first:
-      213: -5703335002854178103
-    second: SkeletonAttack_5
+      213: -1964433785219512950
+    second: DemonSpritesheet_5
   - first:
-      213: -6410131532513703490
-    second: SkeletonAttack_6
+      213: -7952767757171103655
+    second: DemonSpritesheet_6
   - first:
-      213: -1444616491127110605
-    second: SkeletonAttack_7
+      213: 3743403868723848285
+    second: DemonSpritesheet_7
   - first:
-      213: 5348490929694382949
-    second: SkeletonAttack_8
+      213: -7212303265483165137
+    second: DemonSpritesheet_8
   - first:
-      213: -3460507605827764011
-    second: SkeletonAttack_9
+      213: -811445299907588860
+    second: DemonSpritesheet_9
   - first:
-      213: 5828656635149748331
-    second: SkeletonAttack_10
+      213: -6982812484810933755
+    second: DemonSpritesheet_10
   - first:
-      213: -512110792014731890
-    second: SkeletonAttack_11
-  - first:
-      213: -7660148674477636822
-    second: SkeletonAttack_12
-  - first:
-      213: -2703575757687139956
-    second: SkeletonAttack_13
-  - first:
-      213: -4534682994215146347
-    second: SkeletonAttack_14
-  - first:
-      213: 4432307370950129862
-    second: SkeletonAttack_15
-  - first:
-      213: 6216568725664805926
-    second: SkeletonAttack_16
-  - first:
-      213: -6562313669647316910
-    second: SkeletonAttack_17
-  - first:
-      213: -6368224635275459653
-    second: SkeletonAttack_18
+      213: 237237501738463172
+    second: DemonSpritesheet_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -167,13 +146,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SkeletonAttack_0
+      name: DemonSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4df2174342194160800000000000000
+      internalID: 7010154375143423308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f109e60ba190d50800000000000000
+      internalID: 6703918865389199168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e946b9dfb0cbf70800000000000000
+      internalID: 9204244922300145192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7a78f865088f000800000000000000
+      internalID: 69946903487817685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSpritesheet_4
       rect:
         serializedVersion: 2
         x: 0
         y: 96
-        width: 32
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,64 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ea64f6f342c212f0800000000000000
-      internalID: -1003526169788388636
+      spriteID: dd98bd4d630be7710800000000000000
+      internalID: 1692984259483765213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5e1b8c68452ccba0800000000000000
-      internalID: -6067433604985971107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c2f81bf6870f1160800000000000000
-      internalID: 6998320622276768452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_3
+      name: DemonSpritesheet_5
       rect:
         serializedVersion: 2
         x: 96
         y: 96
-        width: 32
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a168d807cac262850800000000000000
-      internalID: 6351813443586983450
+      spriteID: a85073f51edecb4e0800000000000000
+      internalID: -1964433785219512950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_4
+      name: DemonSpritesheet_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 192
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2bb0cfca88eb3680800000000000000
-      internalID: -8774163766112634068
+      spriteID: 958e2a44cd712a190800000000000000
+      internalID: -7952767757171103655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_5
+      name: DemonSpritesheet_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 288
+        y: 96
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,152 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c243df480fa9d0b0800000000000000
-      internalID: -5703335002854178103
+      spriteID: d54ab163cfd33f330800000000000000
+      internalID: 3743403868723848285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb98df06553aa07a0800000000000000
-      internalID: -6410131532513703490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33482b984f0b3fbe0800000000000000
-      internalID: -1444616491127110605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 56b15dcb928a93a40800000000000000
-      internalID: 5348490929694382949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_9
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d04914caaec9ffc0800000000000000
-      internalID: -3460507605827764011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6803dff35c83e050800000000000000
-      internalID: 5828656635149748331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e85615ca2fd94e8f0800000000000000
-      internalID: -512110792014731890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_12
+      name: DemonSpritesheet_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,64 +337,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a23c413ad5fa1b590800000000000000
-      internalID: -7660148674477636822
+      spriteID: f227c787460c8eb90800000000000000
+      internalID: -7212303265483165137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SkeletonAttack_13
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8153bb2c28fa7ad0800000000000000
-      internalID: -2703575757687139956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_14
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59c2dc0b7d19111c0800000000000000
-      internalID: -4534682994215146347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkeletonAttack_15
+      name: DemonSpritesheet_9
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,8 +359,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c8f3dc0218b28d30800000000000000
-      internalID: 4432307370950129862
+      spriteID: 40d09588cca2db4f0800000000000000
+      internalID: -811445299907588860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSpritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a7ea5aa01181f90800000000000000
+      internalID: -6982812484810933755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfa58a3046da4300800000000000000
+      internalID: 237237501738463172
       vertices: []
       indices: 
       edges: []
@@ -522,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ae76d86ae7e861043a21c5112d2de4da
+    spriteID: 23796ec1cd049744db6cf2fc3ac0e432
     internalID: 0
     vertices: []
     indices: 
@@ -532,22 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SkeletonAttack_0: -1003526169788388636
-      SkeletonAttack_1: -6067433604985971107
-      SkeletonAttack_10: 5828656635149748331
-      SkeletonAttack_11: -512110792014731890
-      SkeletonAttack_12: -7660148674477636822
-      SkeletonAttack_13: -2703575757687139956
-      SkeletonAttack_14: -4534682994215146347
-      SkeletonAttack_15: 4432307370950129862
-      SkeletonAttack_2: 6998320622276768452
-      SkeletonAttack_3: 6351813443586983450
-      SkeletonAttack_4: -8774163766112634068
-      SkeletonAttack_5: -5703335002854178103
-      SkeletonAttack_6: -6410131532513703490
-      SkeletonAttack_7: -1444616491127110605
-      SkeletonAttack_8: 5348490929694382949
-      SkeletonAttack_9: -3460507605827764011
+      DemonSpritesheet_0: 7010154375143423308
+      DemonSpritesheet_1: 6703918865389199168
+      DemonSpritesheet_10: -6982812484810933755
+      DemonSpritesheet_11: 237237501738463172
+      DemonSpritesheet_2: 9204244922300145192
+      DemonSpritesheet_3: 69946903487817685
+      DemonSpritesheet_4: 1692984259483765213
+      DemonSpritesheet_5: -1964433785219512950
+      DemonSpritesheet_6: -7952767757171103655
+      DemonSpritesheet_7: 3743403868723848285
+      DemonSpritesheet_8: -7212303265483165137
+      DemonSpritesheet_9: -811445299907588860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
