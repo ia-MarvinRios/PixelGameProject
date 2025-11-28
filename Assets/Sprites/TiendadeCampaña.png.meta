@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 81fd2b87bfda23043b04c40c3aa575ce
+guid: 8a40169e07751714d8b8f4e846eb579f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3679215766834670466
-    second: suelo-leve2_0
+      213: -7881263043920745294
+    second: "TiendadeCama\xF1a_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: suelo-leve2_0
+      name: "TiendadeCama\xF1a_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 5
+        y: 0
+        width: 91
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,96 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e749dcdd0ccc0fcc0800000000000000
-      internalID: -3679215766834670466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: suelo-leve2_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a07dbd137bdc7864a88216e173259145
-      internalID: -726925112
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: suelo-leve2_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5ba7b16da2ffb342bc2428fc2d29b03
-      internalID: -1103016031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: suelo-leve2_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42d455388ec2f594b9ce1d69057a7cc4
-      internalID: -1602265989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: suelo-leve2_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41c07f602702cf140a3457b3153bc182
-      internalID: 1269324951
+      spriteID: 2bca0bda40120a290800000000000000
+      internalID: -7881263043920745294
       vertices: []
       indices: 
       edges: []
@@ -226,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2c4772311ad7920488b5bdebe883ffa8
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -236,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      suelo-leve2_0: -3679215766834670466
-      suelo-leve2_1: -726925112
-      suelo-leve2_2: -1103016031
-      suelo-leve2_3: -1602265989
-      suelo-leve2_4: 1269324951
+      "TiendadeCama\xF1a_0": -7881263043920745294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

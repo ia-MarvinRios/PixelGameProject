@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,7 @@ public class GUIBrain : MonoBehaviour
     [Header("GUI References")]
     [Space(10)]
     [SerializeField] Slider _healthBar;
+    [SerializeField] TMP_Text _killsTxt;
     [SerializeField] internal GameObject _gameOverScreen;
 
     public delegate void OnHealthBarZeroEvent();
@@ -27,6 +29,7 @@ public class GUIBrain : MonoBehaviour
 
     public float UpdateHealthBarByValue(float value) { return _healthBar.value += value * 0.01f; }
     public void SetHealthBar(float value) { _healthBar.value = value; }
+    public void UpdateKillsUI(int value) { _killsTxt.text = $"Kills: {value}"; }
     private void IsHealthBarZero(float value) {
         if (value <= 0)
             onHealthBarZero?.Invoke();

@@ -9,6 +9,7 @@ public class EnemyBrain : MonoBehaviour
 
     [Header("Enemy Settings")]
     [Space(10)]
+    [SerializeField] int _maxLevelEntities = 10;
     [SerializeField] float _spawnRate = 2f;
     [Tooltip("Tag of the target the enemy will move towards.")]
     [SerializeField] string _targetTag = "Player";
@@ -22,6 +23,7 @@ public class EnemyBrain : MonoBehaviour
     public static EnemyBrain Instance { get; private set; }
     public string TargetTag { get { return _targetTag; } set { _targetTag = value; } }
     public float MoveSpeed { get { return _moveSpeed; } }
+    public int EnemyCount { get { return _enemyCount; } set { _enemyCount = value; } }
 
     private void Awake()
     {
@@ -95,9 +97,9 @@ public class EnemyBrain : MonoBehaviour
     IEnumerator SpawnEnemies()
     {
         yield return null;
-        while (GameManager.Instance.TimeOnLevel < 3 * 60)
+        while (GameManager.Instance.TimeOnLevel < GameManager.Instance.LevelTargetTime * 60)
         {
-            if (_enemyCount < 10)
+            if (_enemyCount < _maxLevelEntities)
             {
                 foreach (Transform spawnPoint in _spawnPoints)
                 {

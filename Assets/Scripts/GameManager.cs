@@ -6,10 +6,17 @@ public class GameManager : MonoBehaviour
 {
     private float _timeOnLevel = 0f;
     bool gameOver = false;
+    int _kills = 0;
+
+    [Header("Level Settings")]
+    [Tooltip("Cantidad de tiempo que dura el nivel en minutos")]
+    [SerializeField] float _levelTargetTime = 3;
 
     public static GameManager Instance { get; private set; }
     public float TimeOnLevel { get { return _timeOnLevel; } }
     public bool GameIsOver { get { return gameOver; } }
+    public float LevelTargetTime {  get { return _levelTargetTime; } }
+    public int Kills { get { return _kills; } }
 
     private void Awake()
     {
@@ -24,6 +31,7 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         GUIBrain.onHealthBarZero += GameOver;
+        EnemyController.onEnemyDie += UpdateKills;
     }
     private void OnDisable()
     {
@@ -34,9 +42,11 @@ public class GameManager : MonoBehaviour
         _timeOnLevel += Time.deltaTime;
     }
 
-    public void LoadScene(string name = "Menu")
+    GameObject UpdateKills(GameObject enemy)
     {
-        SceneManager.LoadScene(name, LoadSceneMode.Single);
+        _kills++;
+        GUIBrain.Instance.UpdateKillsUI(_kills);
+        return null;
     }
     void GameOver()
     {
@@ -50,6 +60,10 @@ public class GameManager : MonoBehaviour
 
             UnlockCursor();
         }
+    }
+    public void LoadScene(string name = "Menu")
+    {
+        SceneManager.LoadScene(name, LoadSceneMode.Single);
     }
     public void ConfineCursor()
     {

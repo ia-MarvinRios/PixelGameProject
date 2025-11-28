@@ -42,11 +42,11 @@ public class EnemyController : MonoBehaviour
 
     private void OnEnable()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
-        _collider = GetComponent<CapsuleCollider2D>();
+        SetUpReferences();
 
+        _collider.enabled = true;
         _health = _maxHealth;
+        
         SetUpHealthBar();
 
         _repathCoroutine = StartCoroutine(UpdateTargetPos());
@@ -74,9 +74,20 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         HandleMovement();
+    }
+
+    void SetUpReferences()
+    {
+        if (_rb == null)
+        {
+            _rb = GetComponent<Rigidbody2D>();
+            _rb.sleepMode = RigidbodySleepMode2D.NeverSleep;
+        }
+        if (_animator == null) _animator = GetComponentInChildren<Animator>();
+        if (_collider == null) _collider = GetComponent<CapsuleCollider2D>();
     }
 
     void HandleMovement()
@@ -136,8 +147,9 @@ public class EnemyController : MonoBehaviour
         // Handle death
         if (_health <= 0f)
         {
-            StopMoving();
+            EnemyBrain.Instance.EnemyCount--;
             _collider.enabled = false;
+            StopMoving();
 
             if (_animator != null)
                 StartCoroutine(DieAnim());
@@ -148,13 +160,14 @@ public class EnemyController : MonoBehaviour
     void SetUpHealthBar()
     {
         // Health Bar Reference
-        if (_healthBar == null)
-            _healthBar = ObjectPoolManager.SpawnObject(
-            _healthBarPrefab,
-            _healthBarAnchor.position,
-            Quaternion.identity,
-            ObjectPoolManager.PoolType.EnemyHealthBars).GetComponent<Slider>();
+        _healthBar = ObjectPoolManager.SpawnObject(
+                _healthBarPrefab,
+                _healthBarAnchor.position,
+                Quaternion.identity,
+                ObjectPoolManager.PoolType.EnemyHealthBars).GetComponent<Slider>();
+
         _healthBar.transform.localScale = Vector3.one;
+        _healthBar.value = _health;
     }
 
 
