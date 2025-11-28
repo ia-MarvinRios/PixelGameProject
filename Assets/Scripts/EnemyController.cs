@@ -63,15 +63,39 @@ public class EnemyController : MonoBehaviour
         {
             Debug.Log($"Enemy {gameObject.name} was hit by {collision.gameObject.name}");
 
-            TakeDamage();
+            TakeDamage(5);
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "Bomb":
+                if (other.isTrigger == false) return;
+                if (_collider.IsTouching(other))
+                    TakeDamage(other.GetComponent<Bomb>().Damage);
+                break;
+
+            default:
+                break;
+        }
+    }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && Vector3.Distance(transform.position, other.transform.position) < _attackRange && !_isAttacking) {
-            StartCoroutine(Attack());
+        switch (other.gameObject.tag)
+        {
+            case "Player":
+                if (Vector3.Distance(transform.position, other.transform.position) < _attackRange && !_isAttacking)
+                {
+                    StartCoroutine(Attack());
+                }
+                break;
+
+            default:
+                break;
         }
+        
     }
 
     private void FixedUpdate()
@@ -109,7 +133,9 @@ public class EnemyController : MonoBehaviour
             {
                 _currentPathIndex++;
                 if (_currentPathIndex >= _path.Count) {
-                    StopMoving();
+                    //StopMoving();
+                    _currentPathIndex = _path.Count - 1;
+                    Debug.Log("Enemy on Target");
                 }
             }
         }
@@ -139,9 +165,9 @@ public class EnemyController : MonoBehaviour
             //StopMoving();
         }
     }
-    void TakeDamage()
+    void TakeDamage(float dmg)
     {
-        _health -= 5f;
+        _health -= dmg;
         _healthBar.value = _health/_maxHealth;
 
         // Handle death

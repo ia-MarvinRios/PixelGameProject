@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Stats Settings")]
     [SerializeField] private float _speed = 2f;
+    [SerializeField] private float _bombCooldown = 3f;
+    [SerializeField] private float _bombThrowingForce = 1f;
 
     private Vector2 _direction;
     private Vector2 _mousePos;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     GameObject _currentWeapon;
     Transform _firePoint;
     private bool _isOnCooldown = false;
+    private bool _isOnBombCooldown = false;
 
     // public properties
     public GameObject CurrentWeaponPrefab { get { return _currentWeapon; } set { _currentWeapon = value; } }
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour
         _inputs = GetComponent<PlayerInput>();
         _rb2D = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
+
     }
 
     private void Start()
@@ -49,6 +53,7 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         StopAllCoroutines();
+
     }
 
     private void Update()
@@ -71,22 +76,35 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        _rb2D.linearVelocity = _direction * _speed;
+        if (!GameManager.Instance.GameIsOver)
+        {
+            _rb2D.linearVelocity = _direction * _speed;
 
-        // Update Animator Parameters
-        _animator.SetFloat("Velocity", _rb2D.linearVelocity.magnitude);
-        _animator.SetFloat("InputX", _direction.x);
-        _animator.SetFloat("InputY", _direction.y);
+            // Update Animator Parameters
+            _animator.SetFloat("Velocity", _rb2D.linearVelocity.magnitude);
+            _animator.SetFloat("InputX", _direction.x);
+            _animator.SetFloat("InputY", _direction.y);
+        }
     }
 
     public void Shoot(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed && !_isOnCooldown)
+        if (ctx.performed && !_isOnCooldown && !GameManager.Instance.GameIsOver)
         {
             // Shoot logic
-            AudioManager.Instance.PlaySoundByName("Shoot01");
+            AudioManager.Instance.PlaySoundByName("Shoot01", gameObject.transform);
 
-            StartCoroutine(ShootCoroutine());
+            StartCoroutine(ShootCoroutine(0));
+        }
+    }
+    public void ThrowBomb(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && !_isOnBombCooldown && !GameManager.Instance.GameIsOver)
+        {
+            // Shoot logic
+            AudioManager.Instance.PlaySoundByName("Throw", gameObject.transform);
+
+            StartCoroutine(ShootCoroutine(1));
         }
     }
 
@@ -109,15 +127,36 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator ShootCoroutine()
+    // --- Coroutines ---
+    IEnumerator ShootCoroutine(int a)
     {
-        _isOnCooldown = true;
 
-        var obj = ObjectPoolManager.SpawnObject(_bulletPrefabs[0], _firePoint.position, _firePoint.rotation, ObjectPoolManager.PoolType.BasicBullet01);
-        obj.GetComponent<Bullet>().Initialize((_mouseWorldPos - _firePoint.position).normalized);
-        Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        yield return new WaitForSeconds(_cooldown);
+        switch(a)
+        {
+            case 0:
+                _isOnCooldown = true;
 
-        _isOnCooldown = false;
+                var bullet = ObjectPoolManager.SpawnObject(_bulletPrefabs[a], _firePoint.position, _firePoint.rotation, ObjectPoolManager.PoolType.BasicBullet01);
+                bullet.GetComponent<Bullet>().Initialize((_mouseWorldPos - _firePoint.position).normalized);
+                Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+                yield return new WaitForSeconds(_cooldown);
+
+                _isOnCooldown = false;
+                break;
+
+            case 1:
+                _isOnBombCooldown = true;
+
+                var bomb = ObjectPoolManager.SpawnObject(_bulletPrefabs[a], _firePoint.position, _firePoint.rotation, ObjectPoolManager.PoolType.BasicBullet01);
+                bomb.GetComponent<Rigidbody2D>().AddForce((_mouseWorldPos - _firePoint.position).normalized * _bombThrowingForce, ForceMode2D.Impulse);
+                yield return new WaitForSeconds(_bombCooldown);
+
+                _isOnBombCooldown = false;
+                break;
+
+            default:
+                break;
+        }
+
     }
 }

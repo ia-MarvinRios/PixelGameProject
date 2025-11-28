@@ -50,6 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f475910afdb6b0b449362e4d5f6a576f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelTargetTime: 1.5
+  _levelSong: 
 --- !u!114 &8596136898544199823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthBar: {fileID: 0}
+  _killsTxt: {fileID: 0}
   _gameOverScreen: {fileID: 0}
 --- !u!114 &7419850919570809591
 MonoBehaviour:
@@ -89,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f44004c41fb6d4ebf673990161460c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxLevelEntities: 10
   _spawnRate: 2
   _targetTag: Player
   _moveSpeed: 10
@@ -98,6 +102,10 @@ MonoBehaviour:
   _enemyPrefabs:
   - {fileID: 8471466480247502994, guid: 8a431b44a4d43694cb7b5e74e4a0b4ba, type: 3}
   - {fileID: 8135734617671495556, guid: 17691d48e5ccd354dad5228af3df1296, type: 3}
+  _bossLevel: 0
+  _bossMinuteSpawn: 0
+  _levelBossPrefab: {fileID: 0}
+  _bossSpawnpoint: {fileID: 0}
 --- !u!114 &5781368121023205178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,11 +121,23 @@ MonoBehaviour:
   _playMusicOnLoop: 1
   mixer: {fileID: 24100000, guid: 1d23312337bdf6d409d4e37961c7d3b5, type: 2}
   _musicSource: {fileID: 4371803619923289376}
-  _musicClip: {fileID: 5557987636239012879}
+  _sfxSource: {fileID: 5557987636239012879}
   _soundsLibrary:
   - Clip: {fileID: 8300000, guid: 3f1cc8360b5359045986205d53a073f5, type: 3}
     Type: 0
     Name: Shoot01
+  - Clip: {fileID: 8300000, guid: 57f55570489befd4ab1fe66a1429609e, type: 3}
+    Type: 1
+    Name: SecondBreath
+  - Clip: {fileID: 8300000, guid: 8881473959459744ab541edeed854977, type: 3}
+    Type: 1
+    Name: OutOfAmmo
+  - Clip: {fileID: 8300000, guid: b1bf896395b56cd46834832c94f5418f, type: 3}
+    Type: 1
+    Name: Reloaded
+  - Clip: {fileID: 8300000, guid: 969224ad0f8e854448c8ce964d9309fb, type: 3}
+    Type: 0
+    Name: Throw
 --- !u!82 &4371803619923289376
 AudioSource:
   m_ObjectHideFlags: 0

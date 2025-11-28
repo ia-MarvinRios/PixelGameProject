@@ -15,6 +15,7 @@ public class ObjectPoolManager : MonoBehaviour
     private static GameObject _gameObjectsEmpty;
     private static GameObject _basicBullet01;
     private static GameObject _enemies;
+    private static GameObject _bosses;
     private static GameObject _enemyHealthBars;
     private static Canvas     _uiCanvas;
 
@@ -28,6 +29,7 @@ public class ObjectPoolManager : MonoBehaviour
         BasicBullet01,
         enemies,
         EnemyHealthBars,
+        bosses,
     }
     public static PoolType PoolingType;
 
@@ -54,6 +56,9 @@ public class ObjectPoolManager : MonoBehaviour
 
         _enemies = new GameObject("Enemies");
         _enemies.transform.SetParent(_emptyHolder.transform);
+
+        _bosses = new GameObject("Bosses");
+        _bosses.transform.SetParent(_emptyHolder.transform);
 
         _enemyHealthBars = new GameObject("EnemyHealthBars");
         _enemyHealthBars.transform.SetParent(_canvasObj.transform);
@@ -142,6 +147,9 @@ public class ObjectPoolManager : MonoBehaviour
 
             case PoolType.EnemyHealthBars:
                 return _enemyHealthBars;
+
+            case PoolType.bosses:
+                return _bosses;
 
             default:
                 return null;

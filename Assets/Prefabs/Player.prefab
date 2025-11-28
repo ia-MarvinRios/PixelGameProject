@@ -195,9 +195,13 @@ MonoBehaviour:
   _aim: {fileID: 0}
   _defaultWeapon: {fileID: 7863102022043139381, guid: b03e933cc84b99c44849132bbc76f3a1, type: 3}
   _weaponRoot: {fileID: 8833090779545489256}
+  _orbitOffset: {x: 0, y: 0}
+  _orbitRadius: 0.5
   _bulletPrefabs:
   - {fileID: 6947518719489009406, guid: 21c69ed91be1d864e840dc2adfc35571, type: 3}
+  - {fileID: 6225083784196772301, guid: 0098cc7d8a3f53c4ea58b5f12ee9b0e2, type: 3}
   _speed: 2
+  _bombThrowingForce: 5
 --- !u!70 &3502284345995116803
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -315,6 +319,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: bc86fee0-4d91-410a-8c56-a2d11645f20f
     m_ActionName: 'Player/Roll[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1bcc4070-edcd-40f7-ade4-ccaa4c9f5ebb
+    m_ActionName: 'Player/ThrowBomb[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

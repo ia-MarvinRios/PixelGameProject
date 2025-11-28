@@ -56,19 +56,34 @@ public class AudioManager : MonoBehaviour
         return null;
     }
 
-    public void PlaySoundByName(string name)
+    public void PlaySoundByName(string name, Transform obj)
     {
-        GameAudio sound = (GameAudio)Search(name);
-        switch (sound.Type)
+        GameAudio? sound = Search(name);
+        if (sound == null)
+        {
+            Debug.LogWarning($"Sound '{name}' not found!");
+            return;
+        }
+
+        GameAudio s = sound.Value;
+        switch (s.Type)
         {
             case GameAudio.AudioType.SFX:
-                _sfxSource.Stop();
-                _sfxSource.clip = sound.Clip;
-                _sfxSource.Play();
+                if (obj != null)
+                {
+                    AudioSource.PlayClipAtPoint(s.Clip, obj.position);
+                }
+                else
+                {
+                    _sfxSource.Stop();
+                    _sfxSource.clip = s.Clip;
+                    _sfxSource.Play();
+                }
                 break;
+
             case GameAudio.AudioType.Music:
                 _musicSource.Stop();
-                _musicSource.clip = sound.Clip;
+                _musicSource.clip = s.Clip;
                 _musicSource.Play();
                 break;
         }
@@ -76,8 +91,16 @@ public class AudioManager : MonoBehaviour
 
     public void TransitionToSong(string songName, float time = 1f)
     {
-        GameAudio sound = (GameAudio)Search(songName);
-        StartCoroutine(Transition(sound.Clip, 1f));
+        GameAudio? sound = Search(songName);
+        if (sound == null)
+        {
+            Debug.LogWarning($"Sound '{songName}' not found!");
+            return;
+        }
+
+        GameAudio s = sound.Value;
+
+        StartCoroutine(Transition(s.Clip, 1f));
     }
 
     public void SetChannelVolume(string mixerChannel, float linearVolume) // valor 0.0 a 1.0

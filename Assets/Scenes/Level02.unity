@@ -180,6 +180,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1652592225}
     - target: {fileID: 7648193716632627062, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: _speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648193716632627062, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: _cooldown
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648193716632627062, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
       propertyPath: _weaponRoot
       value: 
       objectReference: {fileID: 221386603}
@@ -187,6 +195,14 @@ PrefabInstance:
       propertyPath: _defaultWeapon
       value: 
       objectReference: {fileID: 7863102022043139381, guid: b03e933cc84b99c44849132bbc76f3a1, type: 3}
+    - target: {fileID: 7648193716632627062, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: _orbitOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648193716632627062, guid: 416b46631ff17a648b799f7850951e0c, type: 3}
+      propertyPath: _orbitOffset.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11957,6 +11973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3996588490580797806, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: _levelSong
+      value: Reloaded
+      objectReference: {fileID: 0}
     - target: {fileID: 5781368121023205178, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
       propertyPath: _sfxSource
       value: 
@@ -12011,7 +12031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7419850919570809591, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
       propertyPath: _enemyPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7419850919570809591, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
       propertyPath: '_spawnPoints.Array.data[0]'
@@ -12037,6 +12057,10 @@ PrefabInstance:
       propertyPath: '_enemyPrefabs.Array.data[1]'
       value: 
       objectReference: {fileID: 8135734617671495556, guid: 17691d48e5ccd354dad5228af3df1296, type: 3}
+    - target: {fileID: 7419850919570809591, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
+      propertyPath: '_enemyPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 7503232302745434459, guid: b18b4e82271621a409f8bc67ded7ccd8, type: 3}
     - target: {fileID: 7846784204178852042, guid: 9737fc7e70d0c5c4ebcad12141fd3f1e, type: 3}
       propertyPath: _killsTxt
       value: 
@@ -12097,6 +12121,10 @@ PrefabInstance:
     - target: {fileID: 1806644210845976220, guid: 5b7a5d959ae4a8644bb91eeb0964d0ee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1631719876}
+    - target: {fileID: 1806644210845976220, guid: 5b7a5d959ae4a8644bb91eeb0964d0ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 2283659028249441629, guid: 5b7a5d959ae4a8644bb91eeb0964d0ee, type: 3}
       propertyPath: m_Pivot.x

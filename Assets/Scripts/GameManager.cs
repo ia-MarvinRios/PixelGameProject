@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [Header("Level Settings")]
     [Tooltip("Cantidad de tiempo que dura el nivel en minutos")]
     [SerializeField] float _levelTargetTime = 3;
+    [SerializeField] string _levelSong = "Reloaded";
 
     public static GameManager Instance { get; private set; }
     public float TimeOnLevel { get { return _timeOnLevel; } }
@@ -24,8 +25,8 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        AudioManager.Instance.PlaySoundByName(_levelSong, null);
         if (SceneManager.GetActiveScene().name != "Menu")
-            AudioManager.Instance.PlaySoundByName("Reloaded");
             ConfineCursor();
     }
     private void OnEnable()
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
         {
             gameOver = true;
             Debug.Log("Player is <color=#FF0000>dead</color>, <color=#ffff>Game Over!</color>");
+
             GUIBrain.Instance._gameOverScreen.SetActive(true);
             Animator animator = GUIBrain.Instance._gameOverScreen.GetComponent<Animator>();
             animator.SetTrigger("Start");

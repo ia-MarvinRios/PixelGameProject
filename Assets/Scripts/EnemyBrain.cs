@@ -6,6 +6,7 @@ public class EnemyBrain : MonoBehaviour
 {
     int _enemyCount = 0;
     Transform[] _targetsTransform;
+    Coroutine _spawnMinionsCoroutine;
 
     [Header("Enemy Settings")]
     [Space(10)]
@@ -19,6 +20,13 @@ public class EnemyBrain : MonoBehaviour
     [Space(10)]
     [SerializeField] Transform[] _spawnPoints;
     [SerializeField] GameObject[] _enemyPrefabs;
+    [Header("Boss Settings")]
+    [Space(10)]
+    [SerializeField] bool _bossLevel = false;
+    [Tooltip("Los segundos en el que los minions dejan de aparecer y se spawnea el boss en su spawnpoint.")]
+    [SerializeField] float _bossTimeSpawn = 0;
+    [SerializeField] GameObject _levelBossPrefab;
+    [SerializeField] Transform _bossSpawnpoint;
 
     public static EnemyBrain Instance { get; private set; }
     public string TargetTag { get { return _targetTag; } set { _targetTag = value; } }
@@ -44,7 +52,8 @@ public class EnemyBrain : MonoBehaviour
     private void Start()
     {
         StoreTargetsTransform();
-        StartCoroutine("SpawnEnemies");
+        _spawnMinionsCoroutine = StartCoroutine(SpawnEnemies());
+        if(_bossLevel) StartCoroutine(BossCountdown());
     }
 
     void StoreTargetsTransform()
@@ -94,6 +103,15 @@ public class EnemyBrain : MonoBehaviour
         return enemy;
     }
 
+    void SpawnBoss()
+    {
+        ObjectPoolManager.SpawnObject(_levelBossPrefab, _bossSpawnpoint.position, Quaternion.identity, ObjectPoolManager.PoolType.bosses);
+    }
+    void StopSpawningMinions()
+    {
+        StopCoroutine(_spawnMinionsCoroutine);
+    }
+
     IEnumerator SpawnEnemies()
     {
         yield return null;
@@ -115,5 +133,13 @@ public class EnemyBrain : MonoBehaviour
                 yield return new WaitForSeconds(_spawnRate);
             }
         }
+    }
+
+    IEnumerator BossCountdown()
+    {
+        yield return new WaitForSeconds(_bossTimeSpawn);
+        StopSpawningMinions();
+        AudioManager.Instance.TransitionToSong("Goliath", 3);
+        SpawnBoss();
     }
 }

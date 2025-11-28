@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("SolidObstacle"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("SolidObstacle") || collision.gameObject.CompareTag("Bomb"))
         {
             StartCoroutine(DisableOnNextFrame());
         }
