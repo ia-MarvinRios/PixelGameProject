@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ProtaIdleSpritesheet_0: 7157626006226560920
+      ProtaIdleSpritesheet_1: -2105938095391031030
+      ProtaIdleSpritesheet_10: 7989677864241976740
+      ProtaIdleSpritesheet_11: -8240358699801875782
+      ProtaIdleSpritesheet_2: -2957929481969538532
+      ProtaIdleSpritesheet_3: 7681527961483524271
+      ProtaIdleSpritesheet_4: 8005591419323885468
+      ProtaIdleSpritesheet_5: -6804586563525970855
+      ProtaIdleSpritesheet_6: -2838092709965090041
+      ProtaIdleSpritesheet_7: 2551725521348633921
+      ProtaIdleSpritesheet_8: -2741876118139352706
+      ProtaIdleSpritesheet_9: 7782568871986244835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

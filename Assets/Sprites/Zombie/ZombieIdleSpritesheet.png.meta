@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ZombieIdleSpritesheet_0: 4947364674414755758
+      ZombieIdleSpritesheet_1: 1763801590673324570
+      ZombieIdleSpritesheet_10: 5413724795944581476
+      ZombieIdleSpritesheet_11: -1705647814594013683
+      ZombieIdleSpritesheet_2: 5624626960502533633
+      ZombieIdleSpritesheet_3: -6246357831993046320
+      ZombieIdleSpritesheet_4: 5411116829458356026
+      ZombieIdleSpritesheet_5: 458881572036467939
+      ZombieIdleSpritesheet_6: -4609201259564515139
+      ZombieIdleSpritesheet_7: -2744980300242025531
+      ZombieIdleSpritesheet_8: -3845841589068680014
+      ZombieIdleSpritesheet_9: 1910780842469305849
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
